@@ -286,12 +286,12 @@
             opacity: 0.8;
         }
         
+        .series-jinpingmei::before { background: linear-gradient(90deg, #d946ef, #f59e0b); }
         .series-xiyouji::before { background: linear-gradient(90deg, var(--gold), #ffed4e); }
         .series-hongloumeng::before { background: linear-gradient(90deg, #ff1493, #ff69b4); }
         .series-shuihuzhuan::before { background: linear-gradient(90deg, var(--red), #ff6b6b); }
         .series-sanguoyanyi::before { background: linear-gradient(90deg, var(--blue), #4dabf7); }
         .series-liaozhai::before { background: linear-gradient(90deg, var(--purple), #9775fa); }
-        .series-jinpingmei::before { background: linear-gradient(90deg, var(--orange), #ffa94d); }
         .series-woyuzombieyouyuehui::before { background: linear-gradient(90deg, var(--cyan), #74c0fc); }
         .series-degula::before { background: linear-gradient(90deg, var(--indigo), #845ef7); }
         
@@ -306,6 +306,26 @@
             font-weight: 900;
             margin-bottom: 20px;
             font-family: 'Orbitron', sans-serif;
+        }
+        
+        .cultural-impact {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 30px 0;
+            border-left: 4px solid var(--accent);
+        }
+        
+        .cultural-impact h4 {
+            color: var(--accent);
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        .cultural-impact p {
+            line-height: 1.6;
+            color: #ccc;
         }
         
         .nft-grid {
@@ -459,7 +479,7 @@
             box-shadow: 0 10px 25px rgba(255, 215, 0, 0.4);
         }
         
-        .btn-buy {
+        .btn-cart {
             background: linear-gradient(135deg, #00ff9d, #00d4aa);
             color: #000;
             width: 100%;
@@ -467,7 +487,7 @@
             padding: 15px;
         }
         
-        .btn-buy:hover {
+        .btn-cart:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 20px rgba(0, 255, 157, 0.4);
         }
@@ -515,1587 +535,1583 @@
             font-weight: bold;
         }
         
-        .fixed-cart {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background: linear-gradient(135deg, var(--accent), var(--primary));
-            color: #000;
-            padding: 20px;
-            border-radius: 50%;
-            box-shadow: 0 10px 30px rgba(0, 255, 157, 0.4);
-            cursor: pointer;
-            transition: all 0.3s ease;
-            z-index: 100;
-            width: 70px;
-            height: 70px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .fixed-cart:hover {
-            transform: scale(1.1);
-            box-shadow: 0 15px 40px rgba(0, 255, 157, 0.6);
-        }
-        
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.9);
-            z-index: 1000;
-            overflow-y: auto;
-        }
-        
-        .modal.show {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-        
-        .modal-content {
-            background: rgba(26, 32, 44, 0.95);
-            border-radius: 25px;
-            padding: 40px;
-            max-width: 900px;
-            width: 100%;
-            max-height: 90vh;
-            overflow-y: auto;
-            border: 2px solid rgba(0, 255, 157, 0.3);
-            backdrop-filter: blur(20px);
-        }
-        
-        .value-section {
-            padding: 60px 0;
-            background: rgba(0, 0, 0, 0.3);
-        }
-        
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin: 40px 0;
-        }
-        
-        .feature-card {
-            background: rgba(26, 32, 44, 0.8);
-            border: 1px solid rgba(0, 255, 157, 0.2);
-            border-radius: 20px;
-            padding: 40px 30px;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--accent);
-            box-shadow: 0 20px 40px rgba(0, 255, 157, 0.2);
-        }
-        
-        .feature-icon {
-            font-size: 4rem;
-            margin-bottom: 20px;
-        }
-        
-        .global-stats {
-            background: rgba(10, 10, 20, 0.9);
-            padding: 60px 0;
-            border-top: 2px solid rgba(0, 255, 157, 0.2);
-            border-bottom: 2px solid rgba(0, 255, 157, 0.2);
-        }
-        
         .footer {
-            background: rgba(5, 5, 10, 0.95);
-            padding: 60px 0 30px;
-            border-top: 2px solid rgba(0, 255, 157, 0.2);
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(0, 255, 157, 0.2);
+            padding: 40px 0;
+            text-align: center;
+            color: #aaa;
         }
         
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-        
-        .footer-section h4 {
+        .social-icons a {
+            color: #aaa;
             font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-            color: var(--accent);
-        }
-        
-        .footer-links {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .footer-links li {
-            margin-bottom: 10px;
-        }
-        
-        .footer-links a {
-            color: #ccc;
-            text-decoration: none;
+            margin: 0 15px;
             transition: color 0.3s ease;
         }
         
-        .footer-links a:hover {
+        .social-icons a:hover {
             color: var(--accent);
         }
-
-        .global-impact {
-            background: rgba(15, 15, 25, 0.9);
-            padding: 50px 0;
-            margin: 40px 0;
-            border-radius: 20px;
-            border: 1px solid rgba(0, 255, 157, 0.2);
-        }
-
-        .impact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            text-align: center;
-        }
-
-        .impact-item {
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.3);
-            border-radius: 15px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .impact-number {
-            font-size: 2rem;
-            font-weight: 900;
-            color: var(--accent);
-            margin-bottom: 10px;
-        }
-
-        .detail-modal {
+        
+        .modal {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.95);
-            z-index: 2000;
-            display: none;
-            overflow-y: auto;
-            padding: 20px;
-        }
-
-        .detail-modal.show {
-            display: block;
-        }
-
-        .detail-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            background: rgba(26, 32, 44, 0.95);
-            border-radius: 25px;
-            padding: 40px;
-            border: 2px solid rgba(0, 255, 157, 0.3);
-            backdrop-filter: blur(20px);
-        }
-
-        .detail-header {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        .detail-image {
-            height: 400px;
-            border-radius: 20px;
+            background: rgba(0, 0, 0, 0.8);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 8rem;
-            position: relative;
-            overflow: hidden;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease;
         }
-
+        
+        .modal.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .modal-content {
+            background: rgba(20, 20, 30, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 800px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            box-shadow: 0 0 50px rgba(0, 255, 157, 0.4);
+            transform: translateY(-50px);
+            transition: transform 0.3s ease;
+        }
+        
+        .modal.show .modal-content {
+            transform: translateY(0);
+        }
+        
+        .close-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2rem;
+            color: #aaa;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        
+        .close-button:hover {
+            color: white;
+        }
+        
+        .modal-nft-image {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .modal-nft-image i {
+            font-size: 8rem;
+            color: var(--accent);
+        }
+        
+        .modal-nft-details {
+            text-align: left;
+        }
+        
+        .modal-nft-details h3 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--accent);
+        }
+        
+        .modal-nft-details .price {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--gold);
+            margin: 20px 0;
+        }
+        
+        .modal-nft-details .description {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #ccc;
+        }
+        
+        .modal-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .modal-stat-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .modal-stat-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+        
+        .modal-stat-label {
+            color: #aaa;
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
         @media (max-width: 768px) {
-            .hero {
-                min-height: 80vh;
-                padding-top: 70px;
-            }
-            
-            .logo-font {
-                font-size: 1.8rem;
-                letter-spacing: 2px;
-            }
-            
-            .series-title {
-                font-size: 1.8rem;
-            }
-            
             .countdown-timer {
                 grid-template-columns: repeat(2, 1fr);
-                gap: 15px;
             }
-            
             .countdown-number {
-                font-size: 2rem;
+                font-size: 2.5rem;
             }
-            
+            .stats-number {
+                font-size: 2.5rem;
+            }
             .nft-grid {
                 grid-template-columns: 1fr;
             }
-            
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .feature-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .nft-series {
-                padding: 25px;
-                margin-bottom: 40px;
-            }
-            
-            .modal-content {
-                padding: 25px;
-                margin: 10px;
-            }
-
-            .detail-header {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-
-            .detail-image {
-                height: 300px;
-                font-size: 6rem;
+            .series-title {
+                font-size: 2rem;
             }
         }
     </style>
 </head>
 <body class="bg-animated">
-
-    <!-- 導航欄 -->
-    <nav class="navbar fixed w-full z-50 px-4 py-4">
+    <nav class="navbar p-4 fixed w-full top-0 z-50">
         <div class="container mx-auto flex justify-between items-center">
-            <div class="flex flex-col">
-                <div class="logo-font text-2xl md:text-3xl">HKAIIFF NFT</div>
-                <div class="text-xs text-accent font-semibold">香港AI國際電影節官方NFT平台</div>
+            <a href="#" class="text-2xl font-bold logo-font">HKAIFF NFT</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#hero" class="text-white hover:text-accent transition duration-300">首頁</a>
+                <a href="#about" class="text-white hover:text-accent transition duration-300">關於我們</a>
+                <a href="#nfts" class="text-white hover:text-accent transition duration-300">NFT系列</a>
+                <a href="#faq" class="text-white hover:text-accent transition duration-300">常見問題</a>
+                <a href="#contact" class="text-white hover:text-accent transition duration-300">聯絡我們</a>
             </div>
-            
-            <div class="flex items-center space-x-6">
-                <div class="hidden md:flex space-x-4 text-sm">
-                    <a href="#collection" class="text-gray-300 hover:text-accent transition-colors">NFT系列</a>
-                    <a href="#value" class="text-gray-300 hover:text-accent transition-colors">收藏價值</a>
-                    <a href="#about" class="text-gray-300 hover:text-accent transition-colors">關於我們</a>
-                </div>
-                <div class="relative">
-                    <button id="cartToggle" class="btn btn-primary relative">
-                        <i class="fas fa-shopping-cart mr-2"></i>購物車
-                        <span id="cartCount" class="cart-count" style="display: none;">0</span>
-                    </button>
-                </div>
+            <div class="flex items-center space-x-4">
+                <button class="text-white text-xl relative" id="cart-button">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cart-count">0</span>
+                </button>
+                <button class="md:hidden text-white text-xl" id="menu-button">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
         </div>
     </nav>
 
-    <!-- 英雄區域 -->
-    <section class="hero">
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-dark bg-opacity-95 z-40 flex flex-col items-center justify-center hidden md:hidden">
+        <button class="absolute top-4 right-4 text-white text-3xl" id="close-menu-button">&times;</button>
+        <a href="#hero" class="text-white text-3xl my-4 hover:text-accent transition duration-300">首頁</a>
+        <a href="#about" class="text-white text-3xl my-4 hover:text-accent transition duration-300">關於我們</a>
+        <a href="#nfts" class="text-white text-3xl my-4 hover:text-accent transition duration-300">NFT系列</a>
+        <a href="#faq" class="text-white text-3xl my-4 hover:text-accent transition duration-300">常見問題</a>
+        <a href="#contact" class="text-white text-3xl my-4 hover:text-accent transition duration-300">聯絡我們</a>
+    </div>
+
+    <section id="hero" class="hero text-center text-white relative">
         <div class="hero-bg"></div>
-        
-        <!-- 浮動星光效果 -->
-        <div class="sparkle" style="top: 15%; left: 8%; animation-delay: 0s;"></div>
-        <div class="sparkle" style="top: 25%; right: 12%; animation-delay: 0.5s;"></div>
-        <div class="sparkle" style="bottom: 35%; left: 18%; animation-delay: 1s;"></div>
-        <div class="sparkle" style="top: 55%; right: 20%; animation-delay: 1.5s;"></div>
-        <div class="sparkle" style="bottom: 20%; left: 45%; animation-delay: 2s;"></div>
-        <div class="sparkle" style="top: 35%; right: 45%; animation-delay: 2.5s;"></div>
-        
-        <div class="container mx-auto px-4 hero-content">
-            <div class="max-w-6xl mx-auto text-center">
-                <div class="mb-12">
-                    <div class="logo-font text-4xl md:text-7xl mb-6">HKAIIFF NFT</div>
-                    <h1 class="text-4xl md:text-6xl font-black mb-6">
-                        <span class="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">
-                            全球首批AI原生電影NFT
-                        </span>
-                    </h1>
-                    <p class="text-xl md:text-2xl text-gray-300 mb-4 font-semibold">
-                        香港AI國際電影節官方認證 • 8大經典IP系列 • 限量82萬枚
-                    </p>
-                    <p class="text-lg md:text-xl text-gray-400">
-                        見證AI電影史的里程碑時刻，擁有永恆的數字文化藝術品
-                    </p>
-                </div>
-
-                <!-- 限時倒計時 -->
-                <div class="countdown-container">
-                    <h3 class="text-2xl md:text-3xl font-bold mb-4 text-center">
-                        <i class="fas fa-clock mr-3 text-accent"></i>限時搶購倒計時
-                    </h3>
-                    <div class="countdown-timer">
-                        <div class="countdown-item">
-                            <div class="countdown-number" id="days">25</div>
-                            <div class="countdown-label">天</div>
-                        </div>
-                        <div class="countdown-item">
-                            <div class="countdown-number" id="hours">04</div>
-                            <div class="countdown-label">小時</div>
-                        </div>
-                        <div class="countdown-item">
-                            <div class="countdown-number" id="minutes">00</div>
-                            <div class="countdown-label">分鐘</div>
-                        </div>
-                        <div class="countdown-item">
-                            <div class="countdown-number" id="seconds">00</div>
-                            <div class="countdown-label">秒</div>
-                        </div>
-                    </div>
-                    <div class="text-center mt-4">
-                        <p class="text-red-400 font-bold text-lg">
-                            倒計時結束後所有NFT價格上漲50%！
-                        </p>
-                    </div>
-                </div>
-
-                <!-- 關鍵統計數據 -->
-                <div class="stats-grid">
-                    <div class="stats-card">
-                        <div class="stats-number">82萬</div>
-                        <div class="text-lg font-semibold">觀影通證</div>
-                        <div class="text-sm text-gray-400 mt-2">創造百億級票房</div>
-                    </div>
-                    <div class="stats-card">
-                        <div class="stats-number">8個</div>
-                        <div class="text-lg font-semibold">頂級IP系列</div>
-                        <div class="text-sm text-gray-400 mt-2">經典文化IP</div>
-                    </div>
-                    <div class="stats-card">
-                        <div class="stats-number">100%</div>
-                        <div class="text-lg font-semibold">AI原生制作</div>
-                        <div class="text-sm text-gray-400 mt-2">技術革新</div>
-                    </div>
-                    <div class="stats-card">
-                        <div class="stats-number">永久</div>
-                        <div class="text-lg font-semibold">觀影權益</div>
-                        <div class="text-sm text-gray-400 mt-2">終身受益</div>
-                    </div>
-                </div>
-
-                <!-- 行動按鈕 -->
-                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6 justify-center mt-12">
-                    <a href="#collection" class="btn btn-gold text-xl px-10 py-4">
-                        <i class="fas fa-gem mr-3"></i>立即搶購NFT
-                    </a>
-                    <a href="#value" class="btn btn-primary text-xl px-10 py-4">
-                        <i class="fas fa-chart-line mr-3"></i>了解收藏價值
-                    </a>
-                </div>
+        <div class="hero-content container mx-auto px-4 py-20">
+            <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6 logo-font animate-pulse">
+                香港AI國際電影節官方NFT平台
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+                全球首批AI原生電影收藏品，融合藝術與科技，開啟數字收藏新紀元。
+            </p>
+            <div class="flex justify-center space-x-4">
+                <a href="#nfts" class="btn btn-primary text-lg md:text-xl">探索NFT系列</a>
             </div>
-        </div>
-    </section>
-
-    <!-- NFT系列收藏 -->
-    <section id="collection" class="py-20">
-        <div class="container mx-auto px-4">
-            <div class="max-w-7xl mx-auto">
-                <div class="text-center mb-20">
-                    <h2 class="text-4xl md:text-6xl font-black mb-8">
-                        <span class="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">
-                            8大經典IP系列NFT
-                        </span>
-                    </h2>
-                    <p class="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto">
-                        每個系列都代表著中華文化與AI技術的完美融合，擁有獨特的視覺設計、稀有度等級和專屬權益
-                    </p>
-                </div>
-                
-                <!-- 西游記系列 -->
-                <div class="nft-series series-xiyouji">
-                    <div class="series-header">
-                        <h2 class="series-title text-gold">《西游記》AI原生電影NFT系列</h2>
-                        <p class="text-xl text-gray-300 mb-6">
-                            全球首部AI原生古典神話史詩電影，齊天大聖的數字化重生
-                        </p>
-                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center mb-8">
-                            <div class="bg-black bg-opacity-30 p-4 rounded-lg">
-                                <div class="text-2xl font-bold text-gold">144,000枚</div>
-                                <div class="text-sm">系列總量</div>
-                            </div>
-                            <div class="bg-black bg-opacity-30 p-4 rounded-lg">
-                                <div class="text-2xl font-bold text-gold">4個</div>
-                                <div class="text-sm">稀有等級</div>
-                            </div>
-                            <div class="bg-black bg-opacity-30 p-4 rounded-lg">
-                                <div class="text-2xl font-bold text-gold">888元</div>
-                                <div class="text-sm">起始價格</div>
-                            </div>
-                            <div class="bg-black bg-opacity-30 p-4 rounded-lg">
-                                <div class="text-2xl font-bold text-gold">永久</div>
-                                <div class="text-sm">觀影權益</div>
-                            </div>
-                        </div>
-
-                        <!-- 全球價值與文化影響力 -->
-                        <div class="global-impact">
-                            <h3 class="text-2xl font-bold text-center mb-6 text-gold">
-                                <i class="fas fa-globe mr-3"></i>全球價值與文化影響力
-                            </h3>
-                            <div class="impact-grid">
-                                <div class="impact-item">
-                                    <div class="impact-number">15億</div>
-                                    <div class="text-sm">全球粉絲基數</div>
-                                </div>
-                                <div class="impact-item">
-                                    <div class="impact-number">100+</div>
-                                    <div class="text-sm">國家地區傳播</div>
-                                </div>
-                                <div class="impact-item">
-                                    <div class="impact-number">500年</div>
-                                    <div class="text-sm">文化傳承歷史</div>
-                                </div>
-                                <div class="impact-item">
-                                    <div class="impact-number">無價</div>
-                                    <div class="text-sm">精神文化價值</div>
-                                </div>
-                            </div>
-                            <p class="text-center text-gray-300 mt-6 max-w-4xl mx-auto">
-                                《西游記》作為中國四大名著之首，在全球範圍內享有極高聲譽。從迪士尼的《花木蘭》到好萊塢的各類改編作品，
-                                都證明了中華文化IP在國際市場的巨大價值。該系列NFT將成為全球收藏家爭相收藏的數字文化瑰寶。
-                            </p>
-                        </div>
+            <div class="countdown-container mt-16">
+                <h2 class="text-3xl font-bold mb-6 text-accent">距離下一波發售：</h2>
+                <div class="countdown-timer">
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="days">00</div>
+                        <div class="countdown-label">天</div>
                     </div>
-                    
-                    <div class="nft-grid">
-                        <!-- 齊天大聖 -->
-                        <div class="nft-card" onclick="openDetailModal('xiyouji-qitiandasheng')">
-                            <div class="limited-badge">傳說</div>
-                            <div class="hot-badge">熱銷</div>
-                            <div class="nft-image bg-gradient-to-br from-yellow-600 to-yellow-900 text-gold">
-                                <i class="fas fa-crown"></i>
-                            </div>
-                            <div class="nft-details">
-                                <h3 class="nft-name text-gold">齊天大聖</h3>
-                                <p class="nft-description">孫悟空最高形態，擁有七十二變神通和火眼金睛，西天取經的核心英雄</p>
-                                <div class="nft-price">¥88,888</div>
-                                <div class="nft-stats">
-                                    <div class="stat-item">
-                                        <div class="stat-value">888</div>
-                                        <div class="stat-label">發行量</div>
-                                    </div>
-                                    <div class="stat-item">
-                                        <div class="stat-value">傳說</div>
-                                        <div class="stat-label">稀有度</div>
-                                    </div>
-                                    <div class="stat-item">
-                                        <div class="stat-value">DAO治理</div>
-                                        <div class="stat-label">特殊權益</div>
-                                    </div>
-                                    <div class="stat-item">
-                                        <div class="stat-value">商業授權</div>
-                                        <div class="stat-label">使用權限</div>
-                                    </div>
-                                </div>
-                                <button class="btn btn-buy" onclick="event.stopPropagation(); addToCart('xiyouji', '齊天大聖', 88888)">
-                                    <i class="fas fa-shopping-cart mr-2"></i>立即搶購
-                                </button>
-                            </div>
-                        </div>
-                        
-                        <!-- 如意金箍棒 -->
-                        <div class="nft-card" onclick="openDetailModal('xiyouji-jingoubang')">
-                            <div class="nft-image bg-gradient-to-br from-yellow-500 to-yellow-800 text-gold">
-                                <i class="fas fa-magic"></i>
-                            </div>
-                            <div class="nft-details">
-                                <h3 class="nft-name text-gold">如意金箍棒</h3>
-                                <p class="nft-description">定海神針，重一萬三千五百斤，可大可小、可長可短的神兵利器</p>
-                                <div class="nft-price">¥8,888</div>
-                                <div class="nft-stats">
-                                    <div class="stat-item">
-                                        <div class="stat-value">8,888</div>
-                                        <div class="stat-label">發行量</div>
-                                    </div>
-                                    <div class="stat-item">
-                                        <div class="stat-value">史詩</div>
-                                        <div class="stat-label">稀有度</div>
-                                    </div>
-                                    <div class="stat-item">
-                                        <div class="stat-value">合成材料</div>
-                                        <div class="stat-label">特殊功能</div>
-                                    </div>
-                                    <div class="stat-item">
-                                        <div class="stat-value">3D動效</div>
-                                        <div class="stat-label">視覺效果</div>
-                                    </div>
-                                </div>
-                                <button class="btn btn-buy" onclick="event.stopPropagation(); addToCart('xiyouji', '如意金箍棒', 8888)">
-                                    <i class="fas fa-shopping-cart mr-2"></i>加入購物車
-                                </button>
-                            </div>
-                        </div>
-                        
-                        <!-- 師徒四人 -->
-                        <div class="nft-card">
-                            <div class="nft-image bg-gradient-to-br from-yellow-400 to-yellow-700 text-gold">
-                                <i class="fas fa-users"></i>
-                            </div>
-                            <div class="nft-details">
-                                <h3 class="nft-name text-gold">師徒四人</h3>
-                                <p class="nft-description">唐僧、孫悟空、豬八戒、沙僧西天取經團隊，展現團結協作精神</p>
-                                <div class="nft-price">¥1,888</div>
-                                <div class="nft-stats">
-                                    <div class="stat-item">
-                                        <div class="stat-value">18,888</div>
-                                        <div class="stat-label">發行量</div>
-                                    </div>
-                                    <div class="stat-item">
-                                        <div class="stat-value">稀有</div>
-                                        <div class="stat-label">稀有度</div>
-                                    </div>
-                                    <div class="stat-item">
-                                        <div class="stat-value">團隊加成</div>
-                                        <div class="stat-label">組合效果</div>
-                                    </div>
-                                    <div class="stat-item">
-                                        <div class="stat-value">社區特權</div>
-                                        <div class="stat-label">專屬權益</div>
-                                    </div>
-                                </div>
-                                <button class="btn btn-buy" onclick="event.stopPropagation(); addToCart('xiyouji', '師徒四人', 1888)">
-                                    <i class="fas fa-shopping-cart mr-2"></i>加入購物車
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- 豬八戒 -->
-                        <div class="nft-card">
-                            <div class="nft-image bg-gradient-to-br from-yellow-400 to-orange-700 text-gold">
-                                <i class="fas fa-smile"></i>
-                            </div>
-                            <div class="nft-details">
-                                <h3 class="nft-name text-gold">豬八戒</h3>
-                                <p class="nft-description">天蓬元帥下凡，憨厚可愛，代表著人性中的真實與可愛</p>
-                                <div class="nft-price">¥888</div>
-                                <div class="nft-stats">
-                                    <div class="stat-item">
-                                        <div class="stat-value">28,888</div>
-                                        <div class="stat-label">發行量</div>
-                                    </div>
-                                    <div class="stat-item">
-                                        <div class="stat-value">稀有</div>
-                                        <div class="stat-label">稀有度</div>
-                                    </div>
-                                    <div class="stat-item">
-                                        <div class="stat-value">憨厚可愛</div>
-                                        <div class="stat-label">性格特點</div>
-                                    </div>
-                                    <div class="stat-item">
-                                        <div class="stat-value">喜劇元素</div>
-                                        <div class="stat-label">娛樂價值</div>
-                                    </div>
-                                </div>
-                                <button class="btn btn-buy" onclick="event.stopPropagation(); addToCart('xiyouji', '豬八戒', 888)">
-                                    <i class="fas fa-shopping-cart mr-2"></i>加入購物車
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- 沙悟淨 -->
-                        <div class="nft-card">
-                            <div class="nft-image bg-gradient-to-br from-yellow-300 to-brown-700 text-gold">
-                                <i class="fas fa-mountain"></i>
-                            </div>
-                            <div class="nft-details">
-                                <h3 class="nft-name text-gold">沙悟淨</h3>
-                                <p class="nft-description">卷簾大將，忠誠老實，默默承擔重任的可靠夥伴</p>
-                                <div class="nft-price">¥666</div>
-                                <div class="nft-stats">
-                                    <div class="stat-item">
-                                        <div class="stat-value">36,666</div>
-                                        <div class="stat-label">發行量</div>
-                                    </div>
-                                    <div class="stat-item">
-                                        <div class="stat-value">普通</div>
-                                        <div class="stat-label">稀有度</div>
-                                    </div>
-                                    <div class="stat-item">
-                                        <div class="stat-value">忠誠可靠</div>
-                                        <div class="stat-label">品格特質</div>
-                                    </div>
-                                    <div class="stat-item">
-                                        <div class="stat-value">團隊協作</div>
-                                        <div class="stat-label">精神價值</div>
-                                    </div>
-                                </div>
-                                <button class="btn btn-buy" onclick="event.stopPropagation(); addToCart('xiyouji', '沙悟淨', 666)">
-                                    <i class="fas fa-shopping-cart mr-2"></i>加入購物車
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- 唐三藏 -->
-                        <div class="nft-card">
-                            <div class="nft-image bg-gradient-to-br from-yellow-200 to-orange-600 text-gold">
-                                <i class="fas fa-praying-hands"></i>
-                            </div>
-                            <div class="nft-details">
-                                <h3 class="nft-name text-gold">唐三藏</h3>
-                                <p class="nft-description">取經領袖，慈悲為懷，代表著堅定信念和慈悲精神</p>
-                                <div class="nft-price">¥1,299</div>
-                                <div class="nft-stats">
-                                    <div class="stat-item">
-                                        <div class="stat-value">12,999</div>
-                                        <div class="stat-label">發行量</div>
-                                    </div>
-                                    <div class="stat-item">
-                                        <div class="stat-value">稀有</div>
-                                        <div class="stat-label">稀有度</div>
-                                    </div>
-                                    <div class="stat-item">
-                                        <div class="stat-value">慈悲智慧</div>
-                                        <div class="stat-label">精神品質</div>
-                                    </div>
-                                    <div class="stat-item">
-                                        <div class="stat-value">領袖氣質</div>
-                                        <div class="stat-label">角色特色</div>
-                                    </div>
-                                </div>
-                                <button class="btn btn-buy" onclick="event.stopPropagation(); addToCart('xiyouji', '唐三藏', 1299)">
-                                    <i class="fas fa-shopping-cart mr-2"></i>加入購物車
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- 火焰山 -->
-                        <div class="nft-card">
-                            <div class="nft-image bg-gradient-to-br from-red-500 to-yellow-600 text-gold">
-                                <i class="fas fa-fire"></i>
-                            </div>
-                            <div class="nft-details">
-                                <h3 class="nft-name text-gold">火焰山</h3>
-                                <p class="nft-description">西游記經典場景，孫悟空三借芭蕉扇的傳奇故事</p>
-                                <div class="nft-price">¥999</div>
-                                <div class="nft-stats">
-                                    <div class="stat-item">
-                                        <div class="stat-value">19,999</div>
-                                        <div class="stat-label">發行量</div>
-                                    </div>
-                                    <div class="stat-item">
-                                        <div class="stat-value">稀有</div>
-                                        <div class="stat-label">稀有度</div>
-                                    </div>
-                                    <div class="stat-item">
-                                        <div class="stat-value">場景還原</div>
-                                        <div class="stat-label">視覺體驗</div>
-                                    </div>
-                                    <div class="stat-item">
-                                        <div class="stat-value">火焰特效</div>
-                                        <div class="stat-label">動態元素</div>
-                                    </div>
-                                </div>
-                                <button class="btn btn-buy" onclick="event.stopPropagation(); addToCart('xiyouji', '火焰山', 999)">
-                                    <i class="fas fa-shopping-cart mr-2"></i>加入購物車
-                                </button>
-                            </div>
-                        </div>
-                        
-                        <!-- 觀影通行證 -->
-                        <div class="nft-card">
-                            <div class="nft-image bg-gradient-to-br from-yellow-300 to-yellow-600 text-gold">
-                                <i class="fas fa-ticket-alt"></i>
-                            </div>
-                            <div class="nft-details">
-                                <h3 class="nft-name text-gold">觀影通行證</h3>
-                                <p class="nft-description">西游記AI電影永久觀影權益憑證，享受4K畫質和環繞音效</p>
-                                <div class="nft-price">¥168</div>
-                                <div class="nft-stats">
-                                    <div class="stat-item">
-                                        <div class="stat-value">48,772</div>
-                                        <div class="stat-label">發行量</div>
-                                    </div>
-                                    <div class="stat-item">
-                                        <div class="stat-value">普通</div>
-                                        <div class="stat-label">稀有度</div>
-                                    </div>
-                                    <div class="stat-item">
-                                        <div class="stat-value">永久觀影</div>
-                                        <div class="stat-label">核心權益</div>
-                                    </div>
-                                    <div class="stat-item">
-                                        <div class="stat-value">可交易</div>
-                                        <div class="stat-label">流動性</div>
-                                    </div>
-                                </div>
-                                <button class="btn btn-buy" onclick="event.stopPropagation(); addToCart('xiyouji', '觀影通行證', 168)">
-                                    <i class="fas fa-shopping-cart mr-2"></i>加入購物車
-                                </button>
-                            </div>
-                        </div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="hours">00</div>
+                        <div class="countdown-label">小時</div>
                     </div>
-                </div>
-                
-                <!-- 红楼梦系列 -->
-                <div class="nft-series series-hongloumeng">
-                    <div class="series-header">
-                        <h2 class="series-title text-pink-400">《红楼梦》AI原生電影NFT系列</h2>
-                        <p class="text-xl text-gray-300 mb-6">
-                            中国古典文学巅峰之作，AI再现大观园中的爱恨情仇
-                        </p>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="minutes">00</div>
+                        <div class="countdown-label">分鐘</div>
                     </div>
-                    
-                    <div class="nft-grid">
-                        <!-- 林黛玉 -->
-                        <div class="nft-card">
-                            <div class="limited-badge">傳說</div>
-                            <div class="nft-image bg-gradient-to-br from-pink-500 to-purple-700 text-pink-300">
-                                <i class="fas fa-feather"></i>
-                            </div>
-                            <div class="nft-details">
-                                <h3 class="nft-name text-pink-300">林黛玉</h3>
-                                <p class="nft-description">红楼梦女主角之一，才情横溢，多愁善感的贵族少女</p>
-                                <div class="nft-price">¥58,888</div>
-                                <div class="nft-stats">
-                                    <div class="stat-item">
-                                        <div class="stat-value">999</div>
-                                        <div class="stat-label">發行量</div>
-                                    </div>
-                                    <div class="stat-item">
-                                        <div class="stat-value">傳說</div>
-                                        <div class="stat-label">稀有度</div>
-                                    </div>
-                                </div>
-                                <button class="btn btn-buy" onclick="event.stopPropagation(); addToCart('hongloumeng', '林黛玉', 58888)">
-                                    <i class="fas fa-shopping-cart mr-2"></i>立即搶購
-                                </button>
-                            </div>
-                        </div>
-                        
-                        <!-- 薛宝钗 -->
-                        <div class="nft-card">
-                            <div class="nft-image bg-gradient-to-br from-pink-400 to-blue-600 text-blue-300">
-                                <i class="fas fa-gem"></i>
-                            </div>
-                            <div class="nft-details">
-                                <h3 class="nft-name text-blue-300">薛宝钗</h3>
-                                <p class="nft-description">红楼梦女主角之一，温婉大方，知书达理的大家闺秀</p>
-                                <div class="nft-price">¥38,888</div>
-                                <div class="nft-stats">
-                                    <div class="stat-item">
-                                        <div class="stat-value">1,888</div>
-                                        <div class="stat-label">發行量</div>
-                                    </div>
-                                    <div class="stat-item">
-                                        <div class="stat-value">史詩</div>
-                                        <div class="stat-label">稀有度</div>
-                                    </div>
-                                </div>
-                                <button class="btn btn-buy" onclick="event.stopPropagation(); addToCart('hongloumeng', '薛宝钗', 38888)">
-                                    <i class="fas fa-shopping-cart mr-2"></i>加入購物車
-                                </button>
-                            </div>
-                        </div>
-                        
-                        <!-- 贾宝玉 -->
-                        <div class="nft-card">
-                            <div class="nft-image bg-gradient-to-br from-red-400 to-pink-600 text-pink-200">
-                                <i class="fas fa-ring"></i>
-                            </div>
-                            <div class="nft-details">
-                                <h3 class="nft-name text-pink-200">贾宝玉</h3>
-                                <p class="nft-description">红楼梦男主角，情痴情种，反叛封建礼教的贵族公子</p>
-                                <div class="nft-price">¥42,888</div>
-                                <div class="nft-stats">
-                                    <div class="stat-item">
-                                        <div class="stat-value">1,288</div>
-                                        <div class="stat-label">發行量</div>
-                                    </div>
-                                    <div class="stat-item">
-                                        <div class="stat-value">史詩</div>
-                                        <div class="stat-label">稀有度</div>
-                                    </div>
-                                </div>
-                                <button class="btn btn-buy" onclick="event.stopPropagation(); addToCart('hongloumeng', '贾宝玉', 42888)">
-                                    <i class="fas fa-shopping-cart mr-2"></i>加入購物車
-                                </button>
-                            </div>
-                        </div>
-                        
-                        <!-- 大观园 -->
-                        <div class="nft-card">
-                            <div class="nft-image bg-gradient-to-br from-green-400 to-teal-700 text-green-300">
-                                <i class="fas fa-tree"></i>
-                            </div>
-                            <div class="nft-details">
-                                <h3 class="nft-name text-green-300">大观园</h3>
-                                <p class="nft-description">红楼梦中的园林艺术巅峰，承载着众多人物的生活场景</p>
-                                <div class="nft-price">¥12,888</div>
-                                <div class="nft-stats">
-                                    <div class="stat-item">
-                                        <div class="stat-value">8,888</div>
-                                        <div class="stat-label">發行量</div>
-                                    </div>
-                                    <div class="stat-item">
-                                        <div class="stat-value">稀有</div>
-                                        <div class="stat-label">稀有度</div>
-                                    </div>
-                                </div>
-                                <button class="btn btn-buy" onclick="event.stopPropagation(); addToCart('hongloumeng', '大观园', 12888)">
-                                    <i class="fas fa-shopping-cart mr-2"></i>加入購物車
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- 水浒传系列 -->
-                <div class="nft-series series-shuihuzhuan">
-                    <div class="series-header">
-                        <h2 class="series-title text-red-400">《水浒传》AI原生電影NFT系列</h2>
-                        <p class="text-xl text-gray-300 mb-6">
-                            梁山好汉的忠义故事，AI再现108将的英雄气概
-                        </p>
-                    </div>
-                    
-                    <div class="nft-grid">
-                        <!-- 武松 -->
-                        <div class="nft-card">
-                            <div class="limited-badge">傳說</div>
-                            <div class="nft-image bg-gradient-to-br from-red-600 to-orange-800 text-red-300">
-                                <i class="fas fa-fist-raised"></i>
-                            </div>
-                            <div class="nft-details">
-                                <h3 class="nft-name text-red-300">武松</h3>
-                                <p class="nft-description">打虎英雄，梁山好汉之一，勇猛刚烈，义薄云天</p>
-                                <div class="nft-price">¥48,888</div>
-                                <div class="nft-stats">
-                                    <div class="stat-item">
-                                        <div class="stat-value">888</div>
-                                        <div class="stat-label">發行量</div>
-                                    </div>
-                                    <div class="stat-item">
-                                        <div class="stat-value">傳說</div>
-                                        <div class="stat-label">稀有度</div>
-                                    </div>
-                                </div>
-                                <button class="btn btn-buy" onclick="event.stopPropagation(); addToCart('shuihuzhuan', '武松', 48888)">
-                                    <i class="fas fa-shopping-cart mr-2"></i>立即搶購
-                                </button>
-                            </div>
-                        </div>
-                        
-                        <!-- 鲁智深 -->
-                        <div class="nft-card">
-                            <div class="nft-image bg-gradient-to-br from-orange-500 to-red-700 text-orange-300">
-                                <i class="fas fa-dumbbell"></i>
-                            </div>
-                            <div class="nft-details">
-                                <h3 class="nft-name text-orange-300">鲁智深</h3>
-                                <p class="nft-description">梁山好汉之一，力大无穷，豪爽直率的花和尚</p>
-                                <div class="nft-price">¥28,888</div>
-                                <div class="nft-stats">
-                                    <div class="stat-item">
-                                        <div class="stat-value">2,888</div>
-                                        <div class="stat-label">發行量</div>
-                                    </div>
-                                    <div class="stat-item">
-                                        <div class="stat-value">史詩</div>
-                                        <div class="stat-label">稀有度</div>
-                                    </div>
-                                </div>
-                                <button class="btn btn-buy" onclick="event.stopPropagation(); addToCart('shuihuzhuan', '鲁智深', 28888)">
-                                    <i class="fas fa-shopping-cart mr-2"></i>加入購物車
-                                </button>
-                            </div>
-                        </div>
-                        
-                        <!-- 林冲 -->
-                        <div class="nft-card">
-                            <div class="nft-image bg-gradient-to-br from-blue-500 to-indigo-700 text-blue-300">
-                                <i class="fas fa-shield-alt"></i>
-                            </div>
-                            <div class="nft-details">
-                                <h3 class="nft-name text-blue-300">林冲</h3>
-                                <p class="nft-description">梁山好汉之一，八十万禁军教头，武艺高强</p>
-                                <div class="nft-price">¥32,888</div>
-                                <div class="nft-stats">
-                                    <div class="stat-item">
-                                        <div class="stat-value">2,288</div>
-                                        <div class="stat-label">發行量</div>
-                                    </div>
-                                    <div class="stat-item">
-                                        <div class="stat-value">史詩</div>
-                                        <div class="stat-label">稀有度</div>
-                                    </div>
-                                </div>
-                                <button class="btn btn-buy" onclick="event.stopPropagation(); addToCart('shuihuzhuan', '林冲', 32888)">
-                                    <i class="fas fa-shopping-cart mr-2"></i>加入購物車
-                                </button>
-                            </div>
-                        </div>
-                        
-                        <!-- 梁山聚义堂 -->
-                        <div class="nft-card">
-                            <div class="nft-image bg-gradient-to-br from-gray-500 to-black text-gray-300">
-                                <i class="fas fa-mountain"></i>
-                            </div>
-                            <div class="nft-details">
-                                <h3 class="nft-name text-gray-300">梁山聚义堂</h3>
-                                <p class="nft-description">梁山好汉聚义之地，象征着反抗压迫的精神</p>
-                                <div class="nft-price">¥18,888</div>
-                                <div class="nft-stats">
-                                    <div class="stat-item">
-                                        <div class="stat-value">5,888</div>
-                                        <div class="stat-label">發行量</div>
-                                    </div>
-                                    <div class="stat-item">
-                                        <div class="stat-value">稀有</div>
-                                        <div class="stat-label">稀有度</div>
-                                    </div>
-                                </div>
-                                <button class="btn btn-buy" onclick="event.stopPropagation(); addToCart('shuihuzhuan', '梁山聚义堂', 18888)">
-                                    <i class="fas fa-shopping-cart mr-2"></i>加入購物車
-                                </button>
-                            </div>
-                        </div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="seconds">00</div>
+                        <div class="countdown-label">秒</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 收藏价值部分 -->
-    <section id="value" class="value-section">
-        <div class="container mx-auto px-4">
-            <div class="max-w-7xl mx-auto">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl md:text-6xl font-black mb-8">
-                        <span class="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">
-                            NFT收藏價值與權益
-                        </span>
-                    </h2>
-                    <p class="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto">
-                        每枚NFT不僅是數字藝術品，更承載著豐富的權益和獨特的收藏價值
-                    </p>
+    <section id="about" class="py-20 px-4">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-12 text-accent">關於香港AI國際電影節NFT</h2>
+            <p class="text-lg leading-relaxed max-w-4xl mx-auto mb-8">
+                香港AI國際電影節（HKAIFF）致力於探索人工智能在電影藝術中的無限可能。我們的官方NFT平台是全球首個專注於AI原生電影收藏品的發行平台，旨在為收藏家和電影愛好者提供獨一無二的數字資產。每一個NFT都代表著AI藝術與電影敘事的完美結合，是未來電影史上的里程碑。
+            </p>
+            <div class="stats-grid">
+                <div class="stats-card">
+                    <div class="stats-number">100+</div>
+                    <div class="text-xl font-semibold text-gray-300">AI原生電影</div>
+                </div>
+                <div class="stats-card">
+                    <div class="stats-number">5000+</div>
+                    <div class="text-xl font-semibold text-gray-300">獨特NFT藏品</div>
+                </div>
+                <div class="stats-card">
+                    <div class="stats-number">¥1000萬+</div>
+                    <div class="text-xl font-semibold text-gray-300">交易總額</div>
+                </div>
+                <div class="stats-card">
+                    <div class="stats-number">2000+</div>
+                    <div class="text-xl font-semibold text-gray-300">活躍收藏家</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="nfts" class="py-20 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-12 text-accent">精選NFT系列</h2>
+
+            <!-- Series 1: 金瓶梅 -->
+            <div class="nft-series series-jinpingmei mb-16">
+                <div class="series-header">
+                    <h3 class="series-title text-purple-400">金瓶梅系列：AI重塑古典禁忌</h3>
+                    <p class="text-lg text-gray-300">深入探索中國古典文學的邊緣，AI以全新視角解讀《金瓶梅》中的人性與慾望。</p>
                 </div>
                 
-                <div class="feature-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon text-accent">
-                            <i class="fas fa-film"></i>
+                <div class="cultural-impact">
+                    <h4>全球文化影響力</h4>
+                    <p>《金瓶梅》作為中國古典文學四大奇書之一，以其對人性深刻的剖析和社會現實的犀利描繪，在世界文學史上佔有重要地位。這部作品不僅影響了後世的中國文學創作，更在全球範圍內被翻譯成多種語言，成為研究中國古代社會文化的重要文獻。AI技術的介入，為這一經典作品注入了新的生命力，讓全球觀眾能夠以全新的視角重新審視這部文學巨著的深層內涵。</p>
+                </div>
+                
+                <div class="nft-grid">
+                    <div class="nft-card" data-id="jp-001" data-name="潘金蓮的誘惑" data-price="¥13,800" data-remaining="10/100" data-description="AI繪製的潘金蓮，眼神中充滿了故事，細膩描繪了其複雜的內心世界。這件作品展現了AI對古典文學人物心理層面的深度理解。">
+                        <span class="limited-badge">限量版</span>
+                        <div class="nft-image"><i class="fas fa-paint-brush text-purple-500"></i></div>
+                        <div class="nft-details">
+                            <h4 class="nft-name text-purple-300">潘金蓮的誘惑</h4>
+                            <p class="nft-description">AI繪製的潘金蓮，眼神中充滿了故事，細膩描繪了其複雜的內心世界。</p>
+                            <div class="nft-price">¥13,800</div>
+                            <div class="nft-stats">
+                                <div class="stat-item"><div class="stat-value">10/100</div><div class="stat-label">剩餘</div></div>
+                                <div class="stat-item"><div class="stat-value">2025/07/01</div><div class="stat-label">發售日期</div></div>
+                            </div>
+                            <button class="btn btn-cart add-to-cart">添加到購物車</button>
                         </div>
-                        <h3 class="text-2xl font-bold mb-4">永久觀影權益</h3>
-                        <p class="text-gray-300">
-                            持有NFT即可永久觀看對應IP的AI電影，享受4K高清畫質和杜比環繞音效
-                        </p>
                     </div>
                     
-                    <div class="feature-card">
-                        <div class="feature-icon text-gold">
-                            <i class="fas fa-crown"></i>
+                    <div class="nft-card" data-id="jp-002" data-name="西門慶的權謀" data-price="¥10,350" data-remaining="50/100" data-description="AI捕捉西門慶的狡黠與權力慾，展現其在複雜關係中的操控手段。作品深度挖掘了權力與慾望的交織。">
+                        <div class="nft-image"><i class="fas fa-mask text-purple-500"></i></div>
+                        <div class="nft-details">
+                            <h4 class="nft-name text-purple-300">西門慶的權謀</h4>
+                            <p class="nft-description">AI捕捉西門慶的狡黠與權力慾，展現其在複雜關係中的操控。</p>
+                            <div class="nft-price">¥10,350</div>
+                            <div class="nft-stats">
+                                <div class="stat-item"><div class="stat-value">50/100</div><div class="stat-label">剩餘</div></div>
+                                <div class="stat-item"><div class="stat-value">2025/07/01</div><div class="stat-label">發售日期</div></div>
+                            </div>
+                            <button class="btn btn-cart add-to-cart">添加到購物車</button>
                         </div>
-                        <h3 class="text-2xl font-bold mb-4">社區治理權</h3>
-                        <p class="text-gray-300">
-                            稀有NFT持有者擁有項目DAO治理投票權，參與未來發展方向決策
-                        </p>
                     </div>
                     
-                    <div class="feature-card">
-                        <div class="feature-icon text-purple">
-                            <i class="fas fa-ticket-alt"></i>
+                    <div class="nft-card" data-id="jp-003" data-name="瓶中之梅" data-price="¥20,700" data-remaining="5/50" data-description="AI視角下的金瓶梅意象，抽象而深邃，引人深思。這是對整部作品精神內核的藝術化詮釋。">
+                        <span class="hot-badge">熱門</span>
+                        <div class="nft-image"><i class="fas fa-book-open text-purple-500"></i></div>
+                        <div class="nft-details">
+                            <h4 class="nft-name text-purple-300">瓶中之梅</h4>
+                            <p class="nft-description">AI視角下的金瓶梅意象，抽象而深邃，引人深思。</p>
+                            <div class="nft-price">¥20,700</div>
+                            <div class="nft-stats">
+                                <div class="stat-item"><div class="stat-value">5/50</div><div class="stat-label">剩餘</div></div>
+                                <div class="stat-item"><div class="stat-value">2025/07/01</div><div class="stat-label">發售日期</div></div>
+                            </div>
+                            <button class="btn btn-cart add-to-cart">添加到購物車</button>
                         </div>
-                        <h3 class="text-2xl font-bold mb-4">線下活動特權</h3>
-                        <p class="text-gray-300">
-                            獲邀參加電影節首映禮、主創見面會及VIP專屬活動
-                        </p>
                     </div>
                     
-                    <div class="feature-card">
-                        <div class="feature-icon text-blue">
-                            <i class="fas fa-coins"></i>
+                    <div class="nft-card" data-id="jp-004" data-name="李瓶兒的哀愁" data-price="¥12,075" data-remaining="25/80" data-description="AI描繪李瓶兒的溫柔與悲劇命運，展現其在愛情與現實間的掙扎。">
+                        <div class="nft-image"><i class="fas fa-rose text-purple-500"></i></div>
+                        <div class="nft-details">
+                            <h4 class="nft-name text-purple-300">李瓶兒的哀愁</h4>
+                            <p class="nft-description">AI描繪李瓶兒的溫柔與悲劇命運，展現其在愛情與現實間的掙扎。</p>
+                            <div class="nft-price">¥12,075</div>
+                            <div class="nft-stats">
+                                <div class="stat-item"><div class="stat-value">25/80</div><div class="stat-label">剩餘</div></div>
+                                <div class="stat-item"><div class="stat-value">2025/07/01</div><div class="stat-label">發售日期</div></div>
+                            </div>
+                            <button class="btn btn-cart add-to-cart">添加到購物車</button>
                         </div>
-                        <h3 class="text-2xl font-bold mb-4">商業授權收益</h3>
-                        <p class="text-gray-300">
-                            持有者可將NFT形象用於商業用途，獲取授權收益
-                        </p>
                     </div>
                     
-                    <div class="feature-card">
-                        <div class="feature-icon text-green">
-                            <i class="fas fa-gift"></i>
+                    <div class="nft-card" data-id="jp-005" data-name="孟玉樓的智慧" data-price="¥9,200" data-remaining="35/120" data-description="AI呈現孟玉樓的賢慧與處世智慧，展現其在複雜家庭關係中的平衡藝術。">
+                        <div class="nft-image"><i class="fas fa-chess-queen text-purple-500"></i></div>
+                        <div class="nft-details">
+                            <h4 class="nft-name text-purple-300">孟玉樓的智慧</h4>
+                            <p class="nft-description">AI呈現孟玉樓的賢慧與處世智慧，展現其在複雜家庭關係中的平衡藝術。</p>
+                            <div class="nft-price">¥9,200</div>
+                            <div class="nft-stats">
+                                <div class="stat-item"><div class="stat-value">35/120</div><div class="stat-label">剩餘</div></div>
+                                <div class="stat-item"><div class="stat-value">2025/07/01</div><div class="stat-label">發售日期</div></div>
+                            </div>
+                            <button class="btn btn-cart add-to-cart">添加到購物車</button>
                         </div>
-                        <h3 class="text-2xl font-bold mb-4">限量周邊贈送</h3>
-                        <p class="text-gray-300">
-                            定期獲得電影節限定周邊商品，包括手辦、畫冊等
-                        </p>
                     </div>
                     
-                    <div class="feature-card">
-                        <div class="feature-icon text-red">
-                            <i class="fas fa-chart-line"></i>
+                    <div class="nft-card" data-id="jp-006" data-name="春梅的反叛" data-price="¥11,500" data-remaining="18/90" data-description="AI捕捉春梅的叛逆精神與獨立意識，展現其對傳統束縛的勇敢挑戰。">
+                        <span class="hot-badge">熱門</span>
+                        <div class="nft-image"><i class="fas fa-fire text-purple-500"></i></div>
+                        <div class="nft-details">
+                            <h4 class="nft-name text-purple-300">春梅的反叛</h4>
+                            <p class="nft-description">AI捕捉春梅的叛逆精神與獨立意識，展現其對傳統束縛的勇敢挑戰。</p>
+                            <div class="nft-price">¥11,500</div>
+                            <div class="nft-stats">
+                                <div class="stat-item"><div class="stat-value">18/90</div><div class="stat-label">剩餘</div></div>
+                                <div class="stat-item"><div class="stat-value">2025/07/01</div><div class="stat-label">發售日期</div></div>
+                            </div>
+                            <button class="btn btn-cart add-to-cart">添加到購物車</button>
                         </div>
-                        <h3 class="text-2xl font-bold mb-4">增值潛力巨大</h3>
-                        <p class="text-gray-300">
-                            隨著電影IP價值提升和市場認可度提高，NFT價值將持續增長
-                        </p>
+                    </div>
+                    
+                    <div class="nft-card" data-id="jp-007" data-name="吳月娘的堅韌" data-price="¥8,625" data-remaining="42/150" data-description="AI描繪吳月娘作為正妻的堅韌與包容，展現其在家族興衰中的支撐力量。">
+                        <div class="nft-image"><i class="fas fa-shield-alt text-purple-500"></i></div>
+                        <div class="nft-details">
+                            <h4 class="nft-name text-purple-300">吳月娘的堅韌</h4>
+                            <p class="nft-description">AI描繪吳月娘作為正妻的堅韌與包容，展現其在家族興衰中的支撐力量。</p>
+                            <div class="nft-price">¥8,625</div>
+                            <div class="nft-stats">
+                                <div class="stat-item"><div class="stat-value">42/150</div><div class="stat-label">剩餘</div></div>
+                                <div class="stat-item"><div class="stat-value">2025/07/01</div><div class="stat-label">發售日期</div></div>
+                            </div>
+                            <button class="btn btn-cart add-to-cart">添加到購物車</button>
+                        </div>
+                    </div>
+                    
+                    <div class="nft-card" data-id="jp-008" data-name="金瓶梅全景" data-price="¥25,875" data-remaining="3/30" data-description="AI重構整部《金瓶梅》的宏大敘事，將所有人物關係與情節線索融為一體的史詩級作品。">
+                        <span class="limited-badge">限量版</span>
+                        <div class="nft-image"><i class="fas fa-scroll text-purple-500"></i></div>
+                        <div class="nft-details">
+                            <h4 class="nft-name text-purple-300">金瓶梅全景</h4>
+                            <p class="nft-description">AI重構整部《金瓶梅》的宏大敘事，將所有人物關係與情節線索融為一體的史詩級作品。</p>
+                            <div class="nft-price">¥25,875</div>
+                            <div class="nft-stats">
+                                <div class="stat-item"><div class="stat-value">3/30</div><div class="stat-label">剩餘</div></div>
+                                <div class="stat-item"><div class="stat-value">2025/07/01</div><div class="stat-label">發售日期</div></div>
+                            </div>
+                            <button class="btn btn-cart add-to-cart">添加到購物車</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Series 2: 西遊記 -->
+            <div class="nft-series series-xiyouji mb-16">
+                <div class="series-header">
+                    <h3 class="series-title text-yellow-400">西遊記系列：AI神話新篇</h3>
+                    <p class="text-lg text-gray-300">AI技術重現經典神話，孫悟空、豬八戒、沙僧與唐僧的西行之路，煥發全新光彩。</p>
+                </div>
+                
+                <div class="cultural-impact">
+                    <h4>全球文化影響力</h4>
+                    <p>《西遊記》作為中國古典文學四大名著之一，其影響力早已超越國界，成為世界文學寶庫中的瑰寶。這部作品不僅在亞洲地區廣為流傳，更被翻譯成數十種語言，在歐美等地擁有大量讀者。孫悟空這一形象已成為中國文化的重要符號，在全球範圍內代表著勇敢、智慧和不屈不撓的精神。AI技術的運用，為這一經典神話注入了現代科技的力量，讓全世界的觀眾能夠以全新的方式體驗這個充滿想像力的奇幻世界。</p>
+                </div>
+                
+                <div class="nft-grid">
+                    <div class="nft-card" data-id="xyj-001" data-name="齊天大聖" data-price="¥12,075" data-remaining="30/150" data-description="AI描繪的孫悟空，金箍棒在手，火眼金睛，威風凜凜。展現了齊天大聖的無畏精神與超凡武藝。">
+                        <div class="nft-image"><i class="fas fa-fire text-yellow-500"></i></div>
+                        <div class="nft-details">
+                            <h4 class="nft-name text-yellow-300">齊天大聖</h4>
+                            <p class="nft-description">AI描繪的孫悟空，金箍棒在手，火眼金睛，威風凜凜。</p>
+                            <div class="nft-price">¥12,075</div>
+                            <div class="nft-stats">
+                                <div class="stat-item"><div class="stat-value">30/150</div><div class="stat-label">剩餘</div></div>
+                                <div class="stat-item"><div class="stat-value">2025/07/15</div><div class="stat-label">發售日期</div></div>
+                            </div>
+                            <button class="btn btn-cart add-to-cart">添加到購物車</button>
+                        </div>
+                    </div>
+                    
+                    <div class="nft-card" data-id="xyj-002" data-name="天蓬元帥" data-price="¥8,625" data-remaining="15/100" data-description="AI視角下的豬八戒，憨態可掬又不失神勇，展現其多面性格與深層魅力。">
+                        <span class="limited-badge">限量版</span>
+                        <div class="nft-image"><i class="fas fa-piggy-bank text-yellow-500"></i></div>
+                        <div class="nft-details">
+                            <h4 class="nft-name text-yellow-300">天蓬元帥</h4>
+                            <p class="nft-description">AI視角下的豬八戒，憨態可掬又不失神勇，展現其多面性。</p>
+                            <div class="nft-price">¥8,625</div>
+                            <div class="nft-stats">
+                                <div class="stat-item"><div class="stat-value">15/100</div><div class="stat-label">剩餘</div></div>
+                                <div class="stat-item"><div class="stat-value">2025/07/15</div><div class="stat-label">發售日期</div></div>
+                            </div>
+                            <button class="btn btn-cart add-to-cart">添加到購物車</button>
+                        </div>
+                    </div>
+                    
+                    <div class="nft-card" data-id="xyj-003" data-name="捲簾大將" data-price="¥6,900" data-remaining="40/150" data-description="AI呈現的沙僧，忠誠而堅毅，是西行路上不可或缺的力量。展現了默默奉獻的精神品質。">
+                        <div class="nft-image"><i class="fas fa-fish text-yellow-500"></i></div>
+                        <div class="nft-details">
+                            <h4 class="nft-name text-yellow-300">捲簾大將</h4>
+                            <p class="nft-description">AI呈現的沙僧，忠誠而堅毅，是西行路上不可或缺的力量。</p>
+                            <div class="nft-price">¥6,900</div>
+                            <div class="nft-stats">
+                                <div class="stat-item"><div class="stat-value">40/150</div><div class="stat-label">剩餘</div></div>
+                                <div class="stat-item"><div class="stat-value">2025/07/15</div><div class="stat-label">發售日期</div></div>
+                            </div>
+                            <button class="btn btn-cart add-to-cart">添加到購物車</button>
+                        </div>
+                    </div>
+                    
+                    <div class="nft-card" data-id="xyj-004" data-name="金蟬子轉世" data-price="¥10,350" data-remaining="22/100" data-description="AI描繪唐僧的慈悲與堅定，展現其在取經路上的精神領袖風範。">
+                        <div class="nft-image"><i class="fas fa-lotus text-yellow-500"></i></div>
+                        <div class="nft-details">
+                            <h4 class="nft-name text-yellow-300">金蟬子轉世</h4>
+                            <p class="nft-description">AI描繪唐僧的慈悲與堅定，展現其在取經路上的精神領袖風範。</p>
+                            <div class="nft-price">¥10,350</div>
+                            <div class="nft-stats">
+                                <div class="stat-item"><div class="stat-value">22/100</div><div class="stat-label">剩餘</div></div>
+                                <div class="stat-item"><div class="stat-value">2025/07/15</div><div class="stat-label">發售日期</div></div>
+                            </div>
+                            <button class="btn btn-cart add-to-cart">添加到購物車</button>
+                        </div>
+                    </div>
+                    
+                    <div class="nft-card" data-id="xyj-005" data-name="白龍馬" data-price="¥7,475" data-remaining="55/180" data-description="AI呈現白龍馬的忠誠與堅韌，默默承載著取經團隊的希望與夢想。">
+                        <div class="nft-image"><i class="fas fa-horse text-yellow-500"></i></div>
+                        <div class="nft-details">
+                            <h4 class="nft-name text-yellow-300">白龍馬</h4>
+                            <p class="nft-description">AI呈現白龍馬的忠誠與堅韌，默默承載著取經團隊的希望與夢想。</p>
+                            <div class="nft-price">¥7,475</div>
+                            <div class="nft-stats">
+                                <div class="stat-item"><div class="stat-value">55/180</div><div class="stat-label">剩餘</div></div>
+                                <div class="stat-item"><div class="stat-value">2025/07/15</div><div class="stat-label">發售日期</div></div>
+                            </div>
+                            <button class="btn btn-cart add-to-cart">添加到購物車</button>
+                        </div>
+                    </div>
+                    
+                    <div class="nft-card" data-id="xyj-006" data-name="大鬧天宮" data-price="¥17,250" data-remaining="8/60" data-description="AI重現孫悟空大鬧天宮的經典場景，展現其挑戰權威的勇氣與力量。">
+                        <span class="hot-badge">熱門</span>
+                        <div class="nft-image"><i class="fas fa-crown text-yellow-500"></i></div>
+                        <div class="nft-details">
+                            <h4 class="nft-name text-yellow-300">大鬧天宮</h4>
+                            <p class="nft-description">AI重現孫悟空大鬧天宮的經典場景，展現其挑戰權威的勇氣與力量。</p>
+                            <div class="nft-price">¥17,250</div>
+                            <div class="nft-stats">
+                                <div class="stat-item"><div class="stat-value">8/60</div><div class="stat-label">剩餘</div></div>
+                                <div class="stat-item"><div class="stat-value">2025/07/15</div><div class="stat-label">發售日期</div></div>
+                            </div>
+                            <button class="btn btn-cart add-to-cart">添加到購物車</button>
+                        </div>
+                    </div>
+                    
+                    <div class="nft-card" data-id="xyj-007" data-name="火焰山" data-price="¥13,800" data-remaining="12/80" data-description="AI描繪火焰山的壯麗與險峻，展現取經路上的重重考驗與挑戰。">
+                        <div class="nft-image"><i class="fas fa-mountain text-yellow-500"></i></div>
+                        <div class="nft-details">
+                            <h4 class="nft-name text-yellow-300">火焰山</h4>
+                            <p class="nft-description">AI描繪火焰山的壯麗與險峻，展現取經路上的重重考驗與挑戰。</p>
+                            <div class="nft-price">¥13,800</div>
+                            <div class="nft-stats">
+                                <div class="stat-item"><div class="stat-value">12/80</div><div class="stat-label">剩餘</div></div>
+                                <div class="stat-item"><div class="stat-value">2025/07/15</div><div class="stat-label">發售日期</div></div>
+                            </div>
+                            <button class="btn btn-cart add-to-cart">添加到購物車</button>
+                        </div>
+                    </div>
+                    
+                    <div class="nft-card" data-id="xyj-008" data-name="西天取經" data-price="¥23,000" data-remaining="5/40" data-description="AI呈現師徒四人西天取經的完整旅程，展現信念與堅持的偉大力量。">
+                        <span class="limited-badge">限量版</span>
+                        <div class="nft-image"><i class="fas fa-temple text-yellow-500"></i></div>
+                        <div class="nft-details">
+                            <h4 class="nft-name text-yellow-300">西天取經</h4>
+                            <p class="nft-description">AI呈現師徒四人西天取經的完整旅程，展現信念與堅持的偉大力量。</p>
+                            <div class="nft-price">¥23,000</div>
+                            <div class="nft-stats">
+                                <div class="stat-item"><div class="stat-value">5/40</div><div class="stat-label">剩餘</div></div>
+                                <div class="stat-item"><div class="stat-value">2025/07/15</div><div class="stat-label">發售日期</div></div>
+                            </div>
+                            <button class="btn btn-cart add-to-cart">添加到購物車</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Series 3: 紅樓夢 -->
+            <div class="nft-series series-hongloumeng mb-16">
+                <div class="series-header">
+                    <h3 class="series-title text-pink-400">紅樓夢系列：AI解讀世間情緣</h3>
+                    <p class="text-lg text-gray-300">AI以細膩筆觸描繪《紅樓夢》中的大觀園眾生相，再現古典愛情與悲劇。</p>
+                </div>
+                
+                <div class="cultural-impact">
+                    <h4>全球文化影響力</h4>
+                    <p>《紅樓夢》被譽為中國古典小說的巔峰之作，其精湛的藝術成就和深刻的思想內涵在世界文學史上獨樹一幟。這部作品不僅在中國文學研究領域佔據核心地位，更在國際學術界引起廣泛關注，被翻譯成多種語言在全球傳播。紅學研究已成為一門國際性的學科，吸引了世界各國學者的深入研究。AI技術的介入，為這部文學巨著的傳播與理解開闢了新的途徑，讓全球讀者能夠更深入地感受中國古典文化的博大精深。</p>
+                </div>
+                
+                <div class="nft-grid">
+                    <div class="nft-card" data-id="hlm-001" data-name="黛玉葬花" data-price="¥17,250" data-remaining="8/80" data-description="AI捕捉林黛玉葬花時的哀愁與詩意，將其內心的敏感與才情展現無遺。這是對古典美學的完美詮釋。">
+                        <span class="hot-badge">熱門</span>
+                        <div class="nft-image"><i class="fas fa-gem text-pink-500"></i></div>
+                        <div class="nft-details">
+                            <h4 class="nft-name text-pink-300">黛玉葬花</h4>
+                            <p class="nft-description">AI捕捉林黛玉葬花時的哀愁與詩意，將其內心的敏感與才情展現無遺。</p>
+                            <div class="nft-price">¥17,250</div>
+                            <div class="nft-stats">
+                                <div class="stat-item"><div class="stat-value">8/80</div><div class="stat-label">剩餘</div></div>
+                                <div class="stat-item"><div class="stat-value">2025/08/01</div><div class="stat-label">發售日期</div></div>
+                            </div>
+                            <button class="btn btn-cart add-to-cart">添加到購物車</button>
+                        </div>
+                    </div>
+                    
+                    <div class="nft-card" data-id="hlm-002" data-name="寶釵撲蝶" data-price="¥12,075" data-remaining="25/100" data-description="AI呈現薛寶釵撲蝶的活潑與機智，展現其不同於黛玉的另一種美麗與智慧。">
+                        <div class="nft-image"><i class="fas fa-fan text-pink-500"></i></div>
+                        <div class="nft-details">
+                            <h4 class="nft-name text-pink-300">寶釵撲蝶</h4>
+                            <p class="nft-description">AI呈現薛寶釵撲蝶的活潑與機智，展現其不同於黛玉的另一種美。</p>
+                            <div class="nft-price">¥12,075</div>
+                            <div class="nft-stats">
+                                <div class="stat-item"><div class="stat-value">25/100</div><div class="stat-label">剩餘</div></div>
+                                <div class="stat-item"><div class="stat-value">2025/08/01</div><div class="stat-label">發售日期</div></div>
+                            </div>
+                            <button class="btn btn-cart add-to-cart">添加到購物車</button>
+                        </div>
+                    </div>
+                    
+                    <div class="nft-card" data-id="hlm-003" data-name="大觀園盛景" data-price="¥25,875" data-remaining="3/30" data-description="AI重構大觀園的亭台樓閣與四季變幻，一幅幅動態畫卷展現古典園林的詩意美學。">
+                        <span class="limited-badge">限量版</span>
+                        <div class="nft-image"><i class="fas fa-tree text-pink-500"></i></div>
+                        <div class="nft-details">
+                            <h4 class="nft-name text-pink-300">大觀園盛景</h4>
+                            <p class="nft-description">AI重構大觀園的亭台樓閣與四季變幻，一幅幅動態畫卷。</p>
+                            <div class="nft-price">¥25,875</div>
+                            <div class="nft-stats">
+                                <div class="stat-item"><div class="stat-value">3/30</div><div class="stat-label">剩餘</div></div>
+                                <div class="stat-item"><div class="stat-value">2025/08/01</div><div class="stat-label">發售日期</div></div>
+                            </div>
+                            <button class="btn btn-cart add-to-cart">添加到購物車</button>
+                        </div>
+                    </div>
+                    
+                    <div class="nft-card" data-id="hlm-004" data-name="寶玉神遊" data-price="¥14,950" data-remaining="15/70" data-description="AI描繪賈寶玉的夢幻與現實交織，展現其獨特的人生哲學與情感世界。">
+                        <div class="nft-image"><i class="fas fa-cloud text-pink-500"></i></div>
+                        <div class="nft-details">
+                            <h4 class="nft-name text-pink-300">寶玉神遊</h4>
+                            <p class="nft-description">AI描繪賈寶玉的夢幻與現實交織，展現其獨特的人生哲學與情感世界。</p>
+                            <div class="nft-price">¥14,950</div>
+                            <div class="nft-stats">
+                                <div class="stat-item"><div class="stat-value">15/70</div><div class="stat-label">剩餘</div></div>
+                                <div class="stat-item"><div class="stat-value">2025/08/01</div><div class="stat-label">發售日期</div></div>
+                            </div>
+                            <button class="btn btn-cart add-to-cart">添加到購物車</button>
+                        </div>
+                    </div>
+                    
+                    <div class="nft-card" data-id="hlm-005" data-name="王熙鳳弄權" data-price="¥13,225" data-remaining="20/90" data-description="AI呈現王熙鳳的精明與手段，展現其在賈府中的權謀與影響力。">
+                        <span class="hot-badge">熱門</span>
+                        <div class="nft-image"><i class="fas fa-chess-queen text-pink-500"></i></div>
+                        <div class="nft-details">
+                            <h4 class="nft-name text-pink-300">王熙鳳弄權</h4>
+                            <p class="nft-description">AI呈現王熙鳳的精明與手段，展現其在賈府中的權謀與影響力。</p>
+                            <div class="nft-price">¥13,225</div>
+                            <div class="nft-stats">
+                                <div class="stat-item"><div class="stat-value">20/90</div><div class="stat-label">剩餘</div></div>
+                                <div class="stat-item"><div class="stat-value">2025/08/01</div><div class="stat-label">發售日期</div></div>
+                            </div>
+                            <button class="btn btn-cart add-to-cart">添加到購物車</button>
+                        </div>
+                    </div>
+                    
+                    <div class="nft-card" data-id="hlm-006" data-name="湘雲醉眠" data-price="¥11,500" data-remaining="28/110" data-description="AI捕捉史湘雲醉眠芍藥花叢的天真爛漫，展現其自然純真的性格魅力。">
+                        <div class="nft-image"><i class="fas fa-flower text-pink-500"></i></div>
+                        <div class="nft-details">
+                            <h4 class="nft-name text-pink-300">湘雲醉眠</h4>
+                            <p class="nft-description">AI捕捉史湘雲醉眠芍藥花叢的天真爛漫，展現其自然純真的性格魅力。</p>
+                            <div class="nft-price">¥11,500</div>
+                            <div class="nft-stats">
+                                <div class="stat-item"><div class="stat-value">28/110</div><div class="stat-label">剩餘</div></div>
+                                <div class="stat-item"><div class="stat-value">2025/08/01</div><div class="stat-label">發售日期</div></div>
+                            </div>
+                            <button class="btn btn-cart add-to-cart">添加到購物車</button>
+                        </div>
+                    </div>
+                    
+                    <div class="nft-card" data-id="hlm-007" data-name="妙玉品茶" data-price="¥10,925" data-remaining="32/120" data-description="AI描繪妙玉的清高與脫俗，展現其在茶道中體現的禪意與美學追求。">
+                        <div class="nft-image"><i class="fas fa-leaf text-pink-500"></i></div>
+                        <div class="nft-details">
+                            <h4 class="nft-name text-pink-300">妙玉品茶</h4>
+                            <p class="nft-description">AI描繪妙玉的清高與脫俗，展現其在茶道中體現的禪意與美學追求。</p>
+                            <div class="nft-price">¥10,925</div>
+                            <div class="nft-stats">
+                                <div class="stat-item"><div class="stat-value">32/120</div><div class="stat-label">剩餘</div></div>
+                                <div class="stat-item"><div class="stat-value">2025/08/01</div><div class="stat-label">發售日期</div></div>
+                            </div>
+                            <button class="btn btn-cart add-to-cart">添加到購物車</button>
+                        </div>
+                    </div>
+                    
+                    <div class="nft-card" data-id="hlm-008" data-name="紅樓夢境" data-price="¥28,750" data-remaining="2/25" data-description="AI重現整部《紅樓夢》的夢幻意境，將所有人物命運與情感糾葛融為一體的終極作品。">
+                        <span class="limited-badge">限量版</span>
+                        <div class="nft-image"><i class="fas fa-moon text-pink-500"></i></div>
+                        <div class="nft-details">
+                            <h4 class="nft-name text-pink-300">紅樓夢境</h4>
+                            <p class="nft-description">AI重現整部《紅樓夢》的夢幻意境，將所有人物命運與情感糾葛融為一體的終極作品。</p>
+                            <div class="nft-price">¥28,750</div>
+                            <div class="nft-stats">
+                                <div class="stat-item"><div class="stat-value">2/25</div><div class="stat-label">剩餘</div></div>
+                                <div class="stat-item"><div class="stat-value">2025/08/01</div><div class="stat-label">發售日期</div></div>
+                            </div>
+                            <button class="btn btn-cart add-to-cart">添加到購物車</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Series 4: 水滸傳 -->
+            <div class="nft-series series-shuihuzhuan mb-16">
+                <div class="series-header">
+                    <h3 class="series-title text-red-400">水滸傳系列：AI演繹梁山好漢</h3>
+                    <p class="text-lg text-gray-300">AI技術再現《水滸傳》中108位梁山好漢的英雄氣概與江湖恩怨。</p>
+                </div>
+                
+                <div class="cultural-impact">
+                    <h4>全球文化影響力</h4>
+                    <p>《水滸傳》作為中國古典文學四大名著之一，以其對俠義精神的頌揚和對社會正義的追求，在世界文學史上佔有重要地位。這部作品不僅在東亞文化圈產生了深遠影響，更在歐美等地被廣泛研究和傳播。梁山好漢的俠義精神已成為中華文化的重要組成部分，代表著對正義的堅持和對弱者的保護。AI技術的運用，為這些經典英雄形象注入了新的活力，讓全世界的觀眾能夠更直觀地感受中國古代俠義文化的魅力與精神內核。</p>
+                </div>
+                
+                <div class="nft-grid">
+                    <div class="nft-card" data-id="shz-001" data-name="武松打虎" data-price="¥15,525" data-remaining="20/120" data-description="AI描繪武松景陽岡打虎的經典場景，力量與勇氣的象徵，展現英雄無畏的精神品質。">
+                        <div class="nft-image"><i class="fas fa-axe text-red-500"></i></div>
+                        <div class="nft-details">
+                            <h4 class="nft-name text-red-300">武松打虎</h4>
+                            <p class="nft-description">AI描繪武松景陽岡打虎的經典場景，力量與勇氣的象徵。</p>
+                            <div class="nft-price">¥15,525</div>
+                            <div class="nft-stats">
+                                <div class="stat-item"><div class="stat-value">20/120</div><div class="stat-label">剩餘</div></div>
+                                <div class="stat-item"><div class="stat-value">2025/08/15</div><div class="stat-label">發售日期</div></div>
+                            </div>
+                            <button class="btn btn-cart add-to-cart">添加到購物車</button>
+                        </div>
+                    </div>
+                    
+                    <div class="nft-card" data-id="shz-002" data-name="魯智深倒拔垂楊柳" data-price="¥13,800" data-remaining="10/100" data-description="AI呈現魯智深豪邁不羈的形象，倒拔垂楊柳的瞬間展現其超凡的力量與豪情。">
+                        <span class="hot-badge">熱門</span>
+                        <div class="nft-image"><i class="fas fa-beer text-red-500"></i></div>
+                        <div class="nft-details">
+                            <h4 class="nft-name text-red-300">魯智深倒拔垂楊柳</h4>
+                            <p class="nft-description">AI呈現魯智深豪邁不羈的形象，倒拔垂楊柳的瞬間。</p>
+                            <div class="nft-price">¥13,800</div>
+                            <div class="nft-stats">
+                                <div class="stat-item"><div class="stat-value">10/100</div><div class="stat-label">剩餘</div></div>
+                                <div class="stat-item"><div class="stat-value">2025/08/15</div><div class="stat-label">發售日期</div></div>
+                            </div>
+                            <button class="btn btn-cart add-to-cart">添加到購物車</button>
+                        </div>
+                    </div>
+                    
+                    <div class="nft-card" data-id="shz-003" data-name="宋江義氣" data-price="¥12,075" data-remaining="30/150" data-description="AI捕捉宋江作為梁山之主的義氣與謀略，展現其複雜的人格魅力與領袖風範。">
+                        <div class="nft-image"><i class="fas fa-dragon text-red-500"></i></div>
+                        <div class="nft-details">
+                            <h4 class="nft-name text-red-300">宋江義氣</h4>
+                            <p class="nft-description">AI捕捉宋江作為梁山之主的義氣與謀略，展現其複雜的人格。</p>
+                            <div class="nft-price">¥12,075</div>
+                            <div class="nft-stats">
+                                <div class="stat-item"><div class="stat-value">30/150</div><div class="stat-label">剩餘</div></div>
+                                <div class="stat-item"><div class="stat-value">2025/08/15</div><div class="stat-label">發售日期</div></div>
+                            </div>
+                            <button class="btn btn-cart add-to-cart">添加到購物車</button>
+                        </div>
+                    </div>
+                    
+                    <div class="nft-card" data-id="shz-004" data-name="林沖風雪山神廟" data-price="¥14,375" data-remaining="18/90" data-description="AI描繪林沖在風雪山神廟的悲壯場景，展現其從忍辱負重到奮起反抗的心路歷程。">
+                        <div class="nft-image"><i class="fas fa-snowflake text-red-500"></i></div>
+                        <div class="nft-details">
+                            <h4 class="nft-name text-red-300">林沖風雪山神廟</h4>
+                            <p class="nft-description">AI描繪林沖在風雪山神廟的悲壯場景，展現其從忍辱負重到奮起反抗的心路歷程。</p>
+                            <div class="nft-price">¥14,375</div>
+                            <div class="nft-stats">
+                                <div class="stat-item"><div class="stat-value">18/90</div><div class="stat-label">剩餘</div></div>
+                                <div class="stat-item"><div class="stat-value">2025/08/15</div><div class="stat-label">發售日期</div></div>
+                            </div>
+                            <button class="btn btn-cart add-to-cart">添加到購物車</button>
+                        </div>
+                    </div>
+                    
+                    <div class="nft-card" data-id="shz-005" data-name="李逵劈魚" data-price="¥10,925" data-remaining="35/130" data-description="AI呈現李逵的率真與勇猛，展現其直爽性格與對兄弟的忠誠。">
+                        <div class="nft-image"><i class="fas fa-fish text-red-500"></i></div>
+                        <div class="nft-details">
+                            <h4 class="nft-name text-red-300">李逵劈魚</h4>
+                            <p class="nft-description">AI呈現李逵的率真與勇猛，展現其直爽性格與對兄弟的忠誠。</p>
+                            <div class="nft-price">¥10,925</div>
+                            <div class="nft-stats">
+                                <div class="stat-item"><div class="stat-value">35/130</div><div class="stat-label">剩餘</div></div>
+                                <div class="stat-item"><div class="stat-value">2025/08/15</div><div class="stat-label">發售日期</div></div>
+                            </div>
+                            <button class="btn btn-cart add-to-cart">添加到購物車</button>
+                        </div>
+                    </div>
+                    
+                    <div class="nft-card" data-id="shz-006" data-name="吳用智取生辰綱" data-price="¥13,225" data-remaining="22/100" data-description="AI描繪智多星吳用的謀略與智慧，展現其在智取生辰綱中的精妙計策。">
+                        <span class="hot-badge">熱門</span>
+                        <div class="nft-image"><i class="fas fa-scroll text-red-500"></i></div>
+                        <div class="nft-details">
+                            <h4 class="nft-name text-red-300">吳用智取生辰綱</h4>
+                            <p class="nft-description">AI描繪智多星吳用的謀略與智慧，展現其在智取生辰綱中的精妙計策。</p>
+                            <div class="nft-price">¥13,225</div>
+                            <div class="nft-stats">
+                                <div class="stat-item"><div class="stat-value">22/100</div><div class="stat-label">剩餘</div></div>
+                                <div class="stat-item"><div class="stat-value">2025/08/15</div><div class="stat-label">發售日期</div></div>
+                            </div>
+                            <button class="btn btn-cart add-to-cart">添加到購物車</button>
+                        </div>
+                    </div>
+                    
+                    <div class="nft-card" data-id="shz-007" data-name="花榮神箭" data-price="¥11,500" data-remaining="28/110" data-description="AI呈現小李廣花榮的神箭技藝，展現其百步穿楊的絕世武功。">
+                        <div class="nft-image"><i class="fas fa-bow-arrow text-red-500"></i></div>
+                        <div class="nft-details">
+                            <h4 class="nft-name text-red-300">花榮神箭</h4>
+                            <p class="nft-description">AI呈現小李廣花榮的神箭技藝，展現其百步穿楊的絕世武功。</p>
+                            <div class="nft-price">¥11,500</div>
+                            <div class="nft-stats">
+                                <div class="stat-item"><div class="stat-value">28/110</div><div class="stat-label">剩餘</div></div>
+                                <div class="stat-item"><div class="stat-value">2025/08/15</div><div class="stat-label">發售日期</div></div>
+                            </div>
+                            <button class="btn btn-cart add-to-cart">添加到購物車</button>
+                        </div>
+                    </div>
+                    
+                    <div class="nft-card" data-id="shz-008" data-name="梁山聚義" data-price="¥24,150" data-remaining="4/35" data-description="AI重現108位梁山好漢聚義的壯觀場面，展現俠義精神與兄弟情深的永恆主題。">
+                        <span class="limited-badge">限量版</span>
+                        <div class="nft-image"><i class="fas fa-flag text-red-500"></i></div>
+                        <div class="nft-details">
+                            <h4 class="nft-name text-red-300">梁山聚義</h4>
+                            <p class="nft-description">AI重現108位梁山好漢聚義的壯觀場面，展現俠義精神與兄弟情深的永恆主題。</p>
+                            <div class="nft-price">¥24,150</div>
+                            <div class="nft-stats">
+                                <div class="stat-item"><div class="stat-value">4/35</div><div class="stat-label">剩餘</div></div>
+                                <div class="stat-item"><div class="stat-value">2025/08/15</div><div class="stat-label">發售日期</div></div>
+                            </div>
+                            <button class="btn btn-cart add-to-cart">添加到購物車</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Series 5: 三國演義 -->
+            <div class="nft-series series-sanguoyanyi mb-16">
+                <div class="series-header">
+                    <h3 class="series-title text-blue-400">三國演義系列：AI重現亂世風雲</h3>
+                    <p class="text-lg text-gray-300">AI技術演繹三國時期的英雄豪傑與經典戰役，再現波瀾壯闊的歷史畫卷。</p>
+                </div>
+                
+                <div class="cultural-impact">
+                    <h4>全球文化影響力</h4>
+                    <p>《三國演義》作為中國古典文學四大名著之一，其影響力早已超越國界，成為世界文學寶庫中的經典之作。這部作品不僅在東亞地區廣為流傳，更在歐美等地擁有大量讀者和研究者。三國時期的英雄人物如諸葛亮、關羽、趙雲等已成為智慧、忠義、勇敢的象徵，在全球範圍內被廣泛認知。AI技術的運用，為這些歷史人物注入了新的生命力，讓全世界的觀眾能夠以全新的視角重新體驗這段波瀾壯闊的歷史，感受中華文化中的智慧與精神追求。</p>
+                </div>
+                
+                <div class="nft-grid">
+                    <div class="nft-card" data-id="sgyy-001" data-name="桃園結義" data-price="¥20,700" data-remaining="5/50" data-description="AI描繪劉備、關羽、張飛桃園結義的感人場景，兄弟情深，展現忠義精神的永恆魅力。">
+                        <span class="limited-badge">限量版</span>
+                        <div class="nft-image"><i class="fas fa-chess-knight text-blue-500"></i></div>
+                        <div class="nft-details">
+                            <h4 class="nft-name text-blue-300">桃園結義</h4>
+                            <p class="nft-description">AI描繪劉備、關羽、張飛桃園結義的感人場景，兄弟情深。</p>
+                            <div class="nft-price">¥20,700</div>
+                            <div class="nft-stats">
+                                <div class="stat-item"><div class="stat-value">5/50</div><div class="stat-label">剩餘</div></div>
+                                <div class="stat-item"><div class="stat-value">2025/09/01</div><div class="stat-label">發售日期</div></div>
+                            </div>
+                            <button class="btn btn-cart add-to-cart">添加到購物車</button>
+                        </div>
+                    </div>
+                    
+                    <div class="nft-card" data-id="sgyy-002" data-name="草船借箭" data-price="¥15,525" data-remaining="20/100" data-description="AI呈現諸葛亮草船借箭的智謀，運籌帷幄之中，決勝千里之外的智慧典範。">
+                        <div class="nft-image"><i class="fas fa-shield-alt text-blue-500"></i></div>
+                        <div class="nft-details">
+                            <h4 class="nft-name text-blue-300">草船借箭</h4>
+                            <p class="nft-description">AI呈現諸葛亮草船借箭的智謀，運籌帷幄之中。</p>
+                            <div class="nft-price">¥15,525</div>
+                            <div class="nft-stats">
+                                <div class="stat-item"><div class="stat-value">20/100</div><div class="stat-label">剩餘</div></div>
+                                <div class="stat-item"><div class="stat-value">2025/09/01</div><div class="stat-label">發售日期</div></div>
+                            </div>
+                            <button class="btn btn-cart add-to-cart">添加到購物車</button>
+                        </div>
+                    </div>
+                    
+                    <div class="nft-card" data-id="sgyy-003" data-name="呂布戲貂蟬" data-price="¥17,250" data-remaining="8/80" data-description="AI描繪呂布與貂蟬的愛恨情仇，亂世中的兒女情長，展現人性的複雜與美麗。">
+                        <span class="hot-badge">熱門</span>
+                        <div class="nft-image"><i class="fas fa-horse-head text-blue-500"></i></div>
+                        <div class="nft-details">
+                            <h4 class="nft-name text-blue-300">呂布戲貂蟬</h4>
+                            <p class="nft-description">AI描繪呂布與貂蟬的愛恨情仇，亂世中的兒女情長。</p>
+                            <div class="nft-price">¥17,250</div>
+                            <div class="nft-stats">
+                                <div class="stat-item"><div class="stat-value">8/80</div><div class="stat-label">剩餘</div></div>
+                                <div class="stat-item"><div class="stat-value">2025/09/01</div><div class="stat-label">發售日期</div></div>
+                            </div>
+                            <button class="btn btn-cart add-to-cart">添加到購物車</button>
+                        </div>
+                    </div>
+                    
+                    <div class="nft-card" data-id="sgyy-004" data-name="關羽過五關斬六將" data-price="¥16,100" data-remaining="12/90" data-description="AI呈現關羽過五關斬六將的英勇事蹟，展現其忠義無雙的武聖風範。">
+                        <div class="nft-image"><i class="fas fa-sword text-blue-500"></i></div>
+                        <div class="nft-details">
+                            <h4 class="nft-name text-blue-300">關羽過五關斬六將</h4>
+                            <p class="nft-description">AI呈現關羽過五關斬六將的英勇事蹟，展現其忠義無雙的武聖風範。</p>
+                            <div class="nft-price">¥16,100</div>
+                            <div class="nft-stats">
+                                <div class="stat-item"><div class="stat-value">12/90</div><div class="stat-label">剩餘</div></div>
+                                <div class="stat-item"><div class="stat-value">2025/09/01</div><div class="stat-label">發售日期</div></div>
+                            </div>
+                            <button class="btn btn-cart add-to-cart">添加到購物車</button>
+                        </div>
+                    </div>
+                    
+                    <div class="nft-card" data-id="sgyy-005" data-name="趙雲救阿斗" data-price="¥14,950" data-remaining="25/110" data-description="AI描繪趙雲長坂坡救阿斗的英勇場面，展現其忠勇無畏的精神品質。">
+                        <div class="nft-image"><i class="fas fa-baby text-blue-500"></i></div>
+                        <div class="nft-details">
+                            <h4 class="nft-name text-blue-300">趙雲救阿斗</h4>
+                            <p class="nft-description">AI描繪趙雲長坂坡救阿斗的英勇場面，展現其忠勇無畏的精神品質。</p>
+                            <div class="nft-price">¥14,950</div>
+                            <div class="nft-stats">
+                                <div class="stat-item"><div class="stat-value">25/110</div><div class="stat-label">剩餘</div></div>
+                                <div class="stat-item"><div class="stat-value">2025/09/01</div><div class="stat-label">發售日期</div></div>
+                            </div>
+                            <button class="btn btn-cart add-to-cart">添加到購物車</button>
+                        </div>
+                    </div>
+                    
+                    <div class="nft-card" data-id="sgyy-006" data-name="空城計" data-price="¥18,400" data-remaining="15/70" data-description="AI呈現諸葛亮空城計的智慧與膽識，展現其臨危不懼的大智慧。">
+                        <span class="hot-badge">熱門</span>
+                        <div class="nft-image"><i class="fas fa-city text-blue-500"></i></div>
+                        <div class="nft-details">
+                            <h4 class="nft-name text-blue-300">空城計</h4>
+                            <p class="nft-description">AI呈現諸葛亮空城計的智慧與膽識，展現其臨危不懼的大智慧。</p>
+                            <div class="nft-price">¥18,400</div>
+                            <div class="nft-stats">
+                                <div class="stat-item"><div class="stat-value">15/70</div><div class="stat-label">剩餘</div></div>
+                                <div class="stat-item"><div class="stat-value">2025/09/01</div><div class="stat-label">發售日期</div></div>
+                            </div>
+                            <button class="btn btn-cart add-to-cart">添加到購物車</button>
+                        </div>
+                    </div>
+                    
+                    <div class="nft-card" data-id="sgyy-007" data-name="火燒赤壁" data-price="¥19,550" data-remaining="10/60" data-description="AI重現赤壁之戰的壯觀場面，展現火攻戰術的精妙與戰爭的殘酷。">
+                        <div class="nft-image"><i class="fas fa-fire text-blue-500"></i></div>
+                        <div class="nft-details">
+                            <h4 class="nft-name text-blue-300">火燒赤壁</h4>
+                            <p class="nft-description">AI重現赤壁之戰的壯觀場面，展現火攻戰術的精妙與戰爭的殘酷。</p>
+                            <div class="nft-price">¥19,550</div>
+                            <div class="nft-stats">
+                                <div class="stat-item"><div class="stat-value">10/60</div><div class="stat-label">剩餘</div></div>
+                                <div class="stat-item"><div class="stat-value">2025/09/01</div><div class="stat-label">發售日期</div></div>
+                            </div>
+                            <button class="btn btn-cart add-to-cart">添加到購物車</button>
+                        </div>
+                    </div>
+                    
+                    <div class="nft-card" data-id="sgyy-008" data-name="三國鼎立" data-price="¥27,600" data-remaining="3/30" data-description="AI呈現三國鼎立的宏大格局，展現亂世英雄逐鹿中原的壯闊史詩。">
+                        <span class="limited-badge">限量版</span>
+                        <div class="nft-image"><i class="fas fa-crown text-blue-500"></i></div>
+                        <div class="nft-details">
+                            <h4 class="nft-name text-blue-300">三國鼎立</h4>
+                            <p class="nft-description">AI呈現三國鼎立的宏大格局，展現亂世英雄逐鹿中原的壯闊史詩。</p>
+                            <div class="nft-price">¥27,600</div>
+                            <div class="nft-stats">
+                                <div class="stat-item"><div class="stat-value">3/30</div><div class="stat-label">剩餘</div></div>
+                                <div class="stat-item"><div class="stat-value">2025/09/01</div><div class="stat-label">發售日期</div></div>
+                            </div>
+                            <button class="btn btn-cart add-to-cart">添加到購物車</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Series 6: 聊齋志異 -->
+            <div class="nft-series series-liaozhai mb-16">
+                <div class="series-header">
+                    <h3 class="series-title text-purple-400">聊齋志異系列：AI探秘幽冥奇譚</h3>
+                    <p class="text-lg text-gray-300">AI技術重現《聊齋志異》中的狐鬼花妖與人間百態，光怪陸離的奇幻世界。</p>
+                </div>
+                
+                <div class="cultural-impact">
+                    <h4>全球文化影響力</h4>
+                    <p>《聊齋志異》作為中國古典短篇小說的巔峰之作，以其豐富的想像力和深刻的人文關懷在世界文學史上獨樹一幟。這部作品不僅在中國文學史上佔有重要地位，更在國際文學界產生了深遠影響，被翻譯成多種語言在全球傳播。蒲松齡筆下的狐仙鬼怪已成為中國傳統文化的重要符號，代表著中華民族豐富的想像力和對超自然世界的獨特理解。AI技術的運用，為這些經典的奇幻故事注入了新的視覺表現力，讓全世界的觀眾能夠更直觀地感受中國古代志怪文學的魅力與深度。</p>
+                </div>
+                
+                <div class="nft-grid">
+                    <div class="nft-card" data-id="lzyy-001" data-name="聶小倩" data-price="¥13,800" data-remaining="15/100" data-description="AI描繪聶小倩的幽怨與美麗，人鬼情未了的經典形象，展現愛情超越生死的永恆主題。">
+                        <div class="nft-image"><i class="fas fa-ghost text-purple-500"></i></div>
+                        <div class="nft-details">
+                            <h4 class="nft-name text-purple-300">聶小倩</h4>
+                            <p class="nft-description">AI描繪聶小倩的幽怨與美麗，人鬼情未了的經典形象。</p>
+                            <div class="nft-price">¥13,800</div>
+                            <div class="nft-stats">
+                                <div class="stat-item"><div class="stat-value">15/100</div><div class="stat-label">剩餘</div></div>
+                                <div class="stat-item"><div class="stat-value">2025/09/15</div><div class="stat-label">發售日期</div></div>
+                            </div>
+                            <button class="btn btn-cart add-to-cart">添加到購物車</button>
+                        </div>
+                    </div>
+                    
+                    <div class="nft-card" data-id="lzyy-002" data-name="畫皮" data-price="¥15,525" data-remaining="10/80" data-description="AI呈現畫皮的驚悚與人性的扭曲，探討善惡邊界，展現人心比鬼更可怕的深刻寓意。">
+                        <span class="hot-badge">熱門</span>
+                        <div class="nft-image"><i class="fas fa-fox text-purple-500"></i></div>
+                        <div class="nft-details">
+                            <h4 class="nft-name text-purple-300">畫皮</h4>
+                            <p class="nft-description">AI呈現畫皮的驚悚與人性的扭曲，探討善惡邊界。</p>
+                            <div class="nft-price">¥15,525</div>
+                            <div class="nft-stats">
+                                <div class="stat-item"><div class="stat-value">10/80</div><div class="stat-label">剩餘</div></div>
+                                <div class="stat-item"><div class="stat-value">2025/09/15</div><div class="stat-label">發售日期</div></div>
+                            </div>
+                            <button class="btn btn-cart add-to-cart">添加到購物車</button>
+                        </div>
+                    </div>
+                    
+                    <div class="nft-card" data-id="lzyy-003" data-name="嬰寧一笑" data-price="¥12,075" data-remaining="20/100" data-description="AI捕捉嬰寧天真爛漫的笑容，純真與妖魅的結合，展現美好品性的珍貴。">
+                        <div class="nft-image"><i class="fas fa-feather-alt text-purple-500"></i></div>
+                        <div class="nft-details">
+                            <h4 class="nft-name text-purple-300">嬰寧一笑</h4>
+                            <p class="nft-description">AI捕捉嬰寧天真爛漫的笑容，純真與妖魅的結合。</p>
+                            <div class="nft-price">¥12,075</div>
+                            <div class="nft-stats">
+                                <div class="stat-item"><div class="stat-value">20/100</div><div class="stat-label">剩餘</div></div>
+                                <div class="stat-item"><div class="stat-value">2025/09/15</div><div class="stat-label">發售日期</div></div>
+                            </div>
+                            <button class="btn btn-cart add-to-cart">添加到購物車</button>
+                        </div>
+                    </div>
+                    
+                    <div class="nft-card" data-id="lzyy-004" data-name="小翠" data-price="¥11,500" data-remaining="25/110" data-description="AI描繪小翠的機靈與善良，展現狐仙對人間真情的嚮往與追求。">
+                        <div class="nft-image"><i class="fas fa-leaf text-purple-500"></i></div>
+                        <div class="nft-details">
+                            <h4 class="nft-name text-purple-300">小翠</h4>
+                            <p class="nft-description">AI描繪小翠的機靈與善良，展現狐仙對人間真情的嚮往與追求。</p>
+                            <div class="nft-price">¥11,500</div>
+                            <div class="nft-stats">
+                                <div class="stat-item"><div class="stat-value">25/110</div><div class="stat-label">剩餘</div></div>
+                                <div class="stat-item"><div class="stat-value">2025/09/15</div><div class="stat-label">發售日期</div></div>
+                            </div>
+                            <button class="btn btn-cart add-to-cart">添加到購物車</button>
+                        </div>
+                    </div>
+                    
+                    <div class="nft-card" data-id="lzyy-005" data-name="香玉" data-price="¥14,375" data-remaining="18/90" data-description="AI呈現香玉的高潔與堅貞，展現花妖對純潔愛情的執著追求。">
+                        <div class="nft-image"><i class="fas fa-flower text-purple-500"></i></div>
+                        <div class="nft-details">
+                            <h4 class="nft-name text-purple-300">香玉</h4>
+                            <p class="nft-description">AI呈現香玉的高潔與堅貞，展現花妖對純潔愛情的執著追求。</p>
+                            <div class="nft-price">¥14,375</div>
+                            <div class="nft-stats">
+                                <div class="stat-item"><div class="stat-value">18/90</div><div class="stat-label">剩餘</div></div>
+                                <div class="stat-item"><div class="stat-value">2025/09/15</div><div class="stat-label">發售日期</div></div>
+                            </div>
+                            <button class="btn btn-cart add-to-cart">添加到購物車</button>
+                        </div>
+                    </div>
+                    
+                    <div class="nft-card" data-id="lzyy-006" data-name="青鳳" data-price="¥13,225" data-remaining="22/100" data-description="AI描繪青鳳的智慧與勇敢，展現其在愛情與責任間的抉擇。">
+                        <span class="hot-badge">熱門</span>
+                        <div class="nft-image"><i class="fas fa-dove text-purple-500"></i></div>
+                        <div class="nft-details">
+                            <h4 class="nft-name text-purple-300">青鳳</h4>
+                            <p class="nft-description">AI描繪青鳳的智慧與勇敢，展現其在愛情與責任間的抉擇。</p>
+                            <div class="nft-price">¥13,225</div>
+                            <div class="nft-stats">
+                                <div class="stat-item"><div class="stat-value">22/100</div><div class="stat-label">剩餘</div></div>
+                                <div class="stat-item"><div class="stat-value">2025/09/15</div><div class="stat-label">發售日期</div></div>
+                            </div>
+                            <button class="btn btn-cart add-to-cart">添加到購物車</button>
+                        </div>
+                    </div>
+                    
+                    <div class="nft-card" data-id="lzyy-007" data-name="辛十四娘" data-price="¥12,650" data-remaining="30/120" data-description="AI呈現辛十四娘的溫柔與堅強，展現女性在困境中的智慧與韌性。">
+                        <div class="nft-image"><i class="fas fa-moon text-purple-500"></i></div>
+                        <div class="nft-details">
+                            <h4 class="nft-name text-purple-300">辛十四娘</h4>
+                            <p class="nft-description">AI呈現辛十四娘的溫柔與堅強，展現女性在困境中的智慧與韌性。</p>
+                            <div class="nft-price">¥12,650</div>
+                            <div class="nft-stats">
+                                <div class="stat-item"><div class="stat-value">30/120</div><div class="stat-label">剩餘</div></div>
+                                <div class="stat-item"><div class="stat-value">2025/09/15</div><div class="stat-label">發售日期</div></div>
+                            </div>
+                            <button class="btn btn-cart add-to-cart">添加到購物車</button>
+                        </div>
+                    </div>
+                    
+                    <div class="nft-card" data-id="lzyy-008" data-name="聊齋奇譚" data-price="¥26,450" data-remaining="4/35" data-description="AI重構整部《聊齋志異》的奇幻世界，將所有狐鬼花妖的故事融為一體的終極作品。">
+                        <span class="limited-badge">限量版</span>
+                        <div class="nft-image"><i class="fas fa-book-open text-purple-500"></i></div>
+                        <div class="nft-details">
+                            <h4 class="nft-name text-purple-300">聊齋奇譚</h4>
+                            <p class="nft-description">AI重構整部《聊齋志異》的奇幻世界，將所有狐鬼花妖的故事融為一體的終極作品。</p>
+                            <div class="nft-price">¥26,450</div>
+                            <div class="nft-stats">
+                                <div class="stat-item"><div class="stat-value">4/35</div><div class="stat-label">剩餘</div></div>
+                                <div class="stat-item"><div class="stat-value">2025/09/15</div><div class="stat-label">發售日期</div></div>
+                            </div>
+                            <button class="btn btn-cart add-to-cart">添加到購物車</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Series 7: 我和殭屍有個約會 -->
+            <div class="nft-series series-woyuzombieyouyuehui mb-16">
+                <div class="series-header">
+                    <h3 class="series-title text-cyan-400">我和殭屍有個約會系列：AI重溫港劇經典</h3>
+                    <p class="text-lg text-gray-300">AI技術重現香港經典電視劇《我和殭屍有個約會》中的馬小玲、況天佑等角色，再現人殭愛情與宿命。</p>
+                </div>
+                
+                <div class="cultural-impact">
+                    <h4>全球文化影響力</h4>
+                    <p>《我和殭屍有個約會》作為香港電視劇的經典之作，不僅在華語地區產生了巨大影響，更在全球華人社區中擁有廣泛的影響力。這部劇集以其獨特的人殭愛情主題和深刻的哲學思考，開創了港劇的新類型，影響了後續無數的影視作品。劇中對愛情、宿命、輪迴等主題的探討，體現了東方文化的深層智慧，在國際文化交流中起到了重要的橋樑作用。AI技術的運用，為這部經典港劇注入了新的視覺表現力，讓全世界的觀眾能夠重新體驗這個跨越時空的愛情故事。</p>
+                </div>
+                
+                <div class="nft-grid">
+                    <div class="nft-card" data-id="wz-001" data-name="馬小玲" data-price="¥17,250" data-remaining="8/80" data-description="AI描繪馬小玲手持伏魔棒，驅魔降妖的英姿，展現其堅強與柔情並存的魅力。">
+                        <span class="limited-badge">限量版</span>
+                        <div class="nft-image"><i class="fas fa-magic text-cyan-500"></i></div>
+                        <div class="nft-details">
+                            <h4 class="nft-name text-cyan-300">馬小玲</h4>
+                            <p class="nft-description">AI描繪馬小玲手持伏魔棒，驅魔降妖的英姿，展現其堅強與柔情。</p>
+                            <div class="nft-price">¥17,250</div>
+                            <div class="nft-stats">
+                                <div class="stat-item"><div class="stat-value">8/80</div><div class="stat-label">剩餘</div></div>
+                                <div class="stat-item"><div class="stat-value">2025/10/01</div><div class="stat-label">發售日期</div></div>
+                            </div>
+                            <button class="btn btn-cart add-to-cart">添加到購物車</button>
+                        </div>
+                    </div>
+                    
+                    <div class="nft-card" data-id="wz-002" data-name="況天佑" data-price="¥15,525" data-remaining="15/100" data-description="AI呈現況天佑作為殭屍的矛盾與深情，守護人間的孤獨身影，展現愛情的偉大力量。">
+                        <div class="nft-image"><i class="fas fa-moon text-cyan-500"></i></div>
+                        <div class="nft-details">
+                            <h4 class="nft-name text-cyan-300">況天佑</h4>
+                            <p class="nft-description">AI呈現況天佑作為殭屍的矛盾與深情，守護人間的孤獨身影。</p>
+                            <div class="nft-price">¥15,525</div>
+                            <div class="nft-stats">
+                                <div class="stat-item"><div class="stat-value">15/100</div><div class="stat-label">剩餘</div></div>
+                                <div class="stat-item"><div class="stat-value">2025/10/01</div><div class="stat-label">發售日期</div></div>
+                            </div>
+                            <button class="btn btn-cart add-to-cart">添加到購物車</button>
+                        </div>
+                    </div>
+                    
+                    <div class="nft-card" data-id="wz-003" data-name="人殭之戀" data-price="¥20,700" data-remaining="5/50" data-description="AI描繪馬小玲與況天佑之間跨越生死的愛情，感人至深，展現愛情超越一切的永恆主題。">
+                        <span class="hot-badge">熱門</span>
+                        <div class="nft-image"><i class="fas fa-heart-broken text-cyan-500"></i></div>
+                        <div class="nft-details">
+                            <h4 class="nft-name text-cyan-300">人殭之戀</h4>
+                            <p class="nft-description">AI描繪馬小玲與況天佑之間跨越生死的愛情，感人至深。</p>
+                            <div class="nft-price">¥20,700</div>
+                            <div class="nft-stats">
+                                <div class="stat-item"><div class="stat-value">5/50</div><div class="stat-label">剩餘</div></div>
+                                <div class="stat-item"><div class="stat-value">2025/10/01</div><div class="stat-label">發售日期</div></div>
+                            </div>
+                            <button class="btn btn-cart add-to-cart">添加到購物車</button>
+                        </div>
+                    </div>
+                    
+                    <div class="nft-card" data-id="wz-004" data-name="將臣" data-price="¥18,975" data-remaining="12/70" data-description="AI呈現殭屍王將臣的威嚴與孤獨，展現其作為不死之身的悲劇命運。">
+                        <div class="nft-image"><i class="fas fa-crown text-cyan-500"></i></div>
+                        <div class="nft-details">
+                            <h4 class="nft-name text-cyan-300">將臣</h4>
+                            <p class="nft-description">AI呈現殭屍王將臣的威嚴與孤獨，展現其作為不死之身的悲劇命運。</p>
+                            <div class="nft-price">¥18,975</div>
+                            <div class="nft-stats">
+                                <div class="stat-item"><div class="stat-value">12/70</div><div class="stat-label">剩餘</div></div>
+                                <div class="stat-item"><div class="stat-value">2025/10/01</div><div class="stat-label">發售日期</div></div>
+                            </div>
+                            <button class="btn btn-cart add-to-cart">添加到購物車</button>
+                        </div>
+                    </div>
+                    
+                    <div class="nft-card" data-id="wz-005" data-name="王珍珍" data-price="¥13,800" data-remaining="20/90" data-description="AI描繪王珍珍的純真與勇敢，展現其在超自然世界中的成長與蛻變。">
+                        <div class="nft-image"><i class="fas fa-star text-cyan-500"></i></div>
+                        <div class="nft-details">
+                            <h4 class="nft-name text-cyan-300">王珍珍</h4>
+                            <p class="nft-description">AI描繪王珍珍的純真與勇敢，展現其在超自然世界中的成長與蛻變。</p>
+                            <div class="nft-price">¥13,800</div>
+                            <div class="nft-stats">
+                                <div class="stat-item"><div class="stat-value">20/90</div><div class="stat-label">剩餘</div></div>
+                                <div class="stat-item"><div class="stat-value">2025/10/01</div><div class="stat-label">發售日期</div></div>
+                            </div>
+                            <button class="btn btn-cart add-to-cart">添加到購物車</button>
+                        </div>
+                    </div>
+                    
+                    <div class="nft-card" data-id="wz-006" data-name="馬丹娜" data-price="¥16,675" data-remaining="18/85" data-description="AI呈現馬丹娜的神秘與智慧，展現其作為馬家後人的使命與責任。">
+                        <span class="hot-badge">熱門</span>
+                        <div class="nft-image"><i class="fas fa-eye text-cyan-500"></i></div>
+                        <div class="nft-details">
+                            <h4 class="nft-name text-cyan-300">馬丹娜</h4>
+                            <p class="nft-description">AI呈現馬丹娜的神秘與智慧，展現其作為馬家後人的使命與責任。</p>
+                            <div class="nft-price">¥16,675</div>
+                            <div class="nft-stats">
+                                <div class="stat-item"><div class="stat-value">18/85</div><div class="stat-label">剩餘</div></div>
+                                <div class="stat-item"><div class="stat-value">2025/10/01</div><div class="stat-label">發售日期</div></div>
+                            </div>
+                            <button class="btn btn-cart add-to-cart">添加到購物車</button>
+                        </div>
+                    </div>
+                    
+                    <div class="nft-card" data-id="wz-007" data-name="命運之輪" data-price="¥14,950" data-remaining="25/110" data-description="AI描繪命運之輪的神秘力量，展現宿命與選擇的永恆主題。">
+                        <div class="nft-image"><i class="fas fa-yin-yang text-cyan-500"></i></div>
+                        <div class="nft-details">
+                            <h4 class="nft-name text-cyan-300">命運之輪</h4>
+                            <p class="nft-description">AI描繪命運之輪的神秘力量，展現宿命與選擇的永恆主題。</p>
+                            <div class
+
+
+="nft-price">¥14,950</div>
+                            <div class="nft-stats">
+                                <div class="stat-item"><div class="stat-value">25/110</div><div class="stat-label">剩餘</div></div>
+                                <div class="stat-item"><div class="stat-value">2025/10/01</div><div class="stat-label">發售日期</div></div>
+                            </div>
+                            <button class="btn btn-cart add-to-cart">添加到購物車</button>
+                        </div>
+                    </div>
+                    
+                    <div class="nft-card" data-id="wz-008" data-name="永恆約會" data-price="¥25,300" data-remaining="3/30" data-description="AI重現整部《我和殭屍有個約會》的經典場景，將人殭愛情的永恆主題融為一體的終極作品。">
+                        <span class="limited-badge">限量版</span>
+                        <div class="nft-image"><i class="fas fa-infinity text-cyan-500"></i></div>
+                        <div class="nft-details">
+                            <h4 class="nft-name text-cyan-300">永恆約會</h4>
+                            <p class="nft-description">AI重現整部《我和殭屍有個約會》的經典場景，將人殭愛情的永恆主題融為一體的終極作品。</p>
+                            <div class="nft-price">¥25,300</div>
+                            <div class="nft-stats">
+                                <div class="stat-item"><div class="stat-value">3/30</div><div class="stat-label">剩餘</div></div>
+                                <div class="stat-item"><div class="stat-value">2025/10/01</div><div class="stat-label">發售日期</div></div>
+                            </div>
+                            <button class="btn btn-cart add-to-cart">添加到購物車</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Series 8: 德古拉 -->
+            <div class="nft-series series-degula mb-16">
+                <div class="series-header">
+                    <h3 class="series-title text-indigo-400">德古拉系列：AI重塑吸血鬼傳說</h3>
+                    <p class="text-lg text-gray-300">AI技術重現經典吸血鬼德古拉的黑暗魅力，探索永生與詛咒的哥特美學。</p>
+                </div>
+                
+                <div class="cultural-impact">
+                    <h4>全球文化影響力</h4>
+                    <p>《德古拉》作為西方哥特文學的經典之作，其影響力早已超越文學範疇，成為全球流行文化的重要組成部分。這部作品不僅在歐美文學史上佔有重要地位，更在全世界範圍內產生了深遠影響，衍生出無數的電影、電視劇、遊戲等文化產品。德古拉這一吸血鬼形象已成為西方文化的重要符號，代表著對永生、慾望和黑暗的探索。AI技術的運用，為這一經典的哥特形象注入了新的視覺表現力，讓全世界的觀眾能夠以全新的方式體驗這個充滿魅力與恐怖的黑暗世界。</p>
+                </div>
+                
+                <div class="nft-grid">
+                    <div class="nft-card" data-id="dgl-001" data-name="德古拉伯爵" data-price="¥19,550" data-remaining="6/60" data-description="AI描繪德古拉伯爵的高貴與邪惡，展現其作為吸血鬼之王的威嚴與魅力。">
+                        <span class="limited-badge">限量版</span>
+                        <div class="nft-image"><i class="fas fa-vampire text-indigo-500"></i></div>
+                        <div class="nft-details">
+                            <h4 class="nft-name text-indigo-300">德古拉伯爵</h4>
+                            <p class="nft-description">AI描繪德古拉伯爵的高貴與邪惡，展現其作為吸血鬼之王的威嚴與魅力。</p>
+                            <div class="nft-price">¥19,550</div>
+                            <div class="nft-stats">
+                                <div class="stat-item"><div class="stat-value">6/60</div><div class="stat-label">剩餘</div></div>
+                                <div class="stat-item"><div class="stat-value">2025/10/15</div><div class="stat-label">發售日期</div></div>
+                            </div>
+                            <button class="btn btn-cart add-to-cart">添加到購物車</button>
+                        </div>
+                    </div>
+                    
+                    <div class="nft-card" data-id="dgl-002" data-name="米娜·哈克" data-price="¥16,100" data-remaining="12/90" data-description="AI呈現米娜·哈克的純潔與堅強，展現其在黑暗中的光明與希望。">
+                        <div class="nft-image"><i class="fas fa-cross text-indigo-500"></i></div>
+                        <div class="nft-details">
+                            <h4 class="nft-name text-indigo-300">米娜·哈克</h4>
+                            <p class="nft-description">AI呈現米娜·哈克的純潔與堅強，展現其在黑暗中的光明與希望。</p>
+                            <div class="nft-price">¥16,100</div>
+                            <div class="nft-stats">
+                                <div class="stat-item"><div class="stat-value">12/90</div><div class="stat-label">剩餘</div></div>
+                                <div class="stat-item"><div class="stat-value">2025/10/15</div><div class="stat-label">發售日期</div></div>
+                            </div>
+                            <button class="btn btn-cart add-to-cart">添加到購物車</button>
+                        </div>
+                    </div>
+                    
+                    <div class="nft-card" data-id="dgl-003" data-name="露西·韋斯滕拉" data-price="¥17,825" data-remaining="8/70" data-description="AI描繪露西·韋斯滕拉的美麗與悲劇，展現其從純真少女到吸血鬼的轉變。">
+                        <span class="hot-badge">熱門</span>
+                        <div class="nft-image"><i class="fas fa-rose text-indigo-500"></i></div>
+                        <div class="nft-details">
+                            <h4 class="nft-name text-indigo-300">露西·韋斯滕拉</h4>
+                            <p class="nft-description">AI描繪露西·韋斯滕拉的美麗與悲劇，展現其從純真少女到吸血鬼的轉變。</p>
+                            <div class="nft-price">¥17,825</div>
+                            <div class="nft-stats">
+                                <div class="stat-item"><div class="stat-value">8/70</div><div class="stat-label">剩餘</div></div>
+                                <div class="stat-item"><div class="stat-value">2025/10/15</div><div class="stat-label">發售日期</div></div>
+                            </div>
+                            <button class="btn btn-cart add-to-cart">添加到購物車</button>
+                        </div>
+                    </div>
+                    
+                    <div class="nft-card" data-id="dgl-004" data-name="范海辛教授" data-price="¥15,525" data-remaining="20/100" data-description="AI呈現范海辛教授的智慧與勇氣，展現其作為吸血鬼獵人的專業與決心。">
+                        <div class="nft-image"><i class="fas fa-book text-indigo-500"></i></div>
+                        <div class="nft-details">
+                            <h4 class="nft-name text-indigo-300">范海辛教授</h4>
+                            <p class="nft-description">AI呈現范海辛教授的智慧與勇氣，展現其作為吸血鬼獵人的專業與決心。</p>
+                            <div class="nft-price">¥15,525</div>
+                            <div class="nft-stats">
+                                <div class="stat-item"><div class="stat-value">20/100</div><div class="stat-label">剩餘</div></div>
+                                <div class="stat-item"><div class="stat-value">2025/10/15</div><div class="stat-label">發售日期</div></div>
+                            </div>
+                            <button class="btn btn-cart add-to-cart">添加到購物車</button>
+                        </div>
+                    </div>
+                    
+                    <div class="nft-card" data-id="dgl-005" data-name="德古拉城堡" data-price="¥21,275" data-remaining="10/50" data-description="AI重現德古拉城堡的陰森與神秘，展現哥特建築的黑暗美學。">
+                        <div class="nft-image"><i class="fas fa-castle text-indigo-500"></i></div>
+                        <div class="nft-details">
+                            <h4 class="nft-name text-indigo-300">德古拉城堡</h4>
+                            <p class="nft-description">AI重現德古拉城堡的陰森與神秘，展現哥特建築的黑暗美學。</p>
+                            <div class="nft-price">¥21,275</div>
+                            <div class="nft-stats">
+                                <div class="stat-item"><div class="stat-value">10/50</div><div class="stat-label">剩餘</div></div>
+                                <div class="stat-item"><div class="stat-value">2025/10/15</div><div class="stat-label">發售日期</div></div>
+                            </div>
+                            <button class="btn btn-cart add-to-cart">添加到購物車</button>
+                        </div>
+                    </div>
+                    
+                    <div class="nft-card" data-id="dgl-006" data-name="血色誘惑" data-price="¥18,400" data-remaining="15/80" data-description="AI描繪吸血鬼的血色誘惑，展現永生與詛咒的雙重魅力。">
+                        <span class="hot-badge">熱門</span>
+                        <div class="nft-image"><i class="fas fa-wine-glass text-indigo-500"></i></div>
+                        <div class="nft-details">
+                            <h4 class="nft-name text-indigo-300">血色誘惑</h4>
+                            <p class="nft-description">AI描繪吸血鬼的血色誘惑，展現永生與詛咒的雙重魅力。</p>
+                            <div class="nft-price">¥18,400</div>
+                            <div class="nft-stats">
+                                <div class="stat-item"><div class="stat-value">15/80</div><div class="stat-label">剩餘</div></div>
+                                <div class="stat-item"><div class="stat-value">2025/10/15</div><div class="stat-label">發售日期</div></div>
+                            </div>
+                            <button class="btn btn-cart add-to-cart">添加到購物車</button>
+                        </div>
+                    </div>
+                    
+                    <div class="nft-card" data-id="dgl-007" data-name="月夜狩獵" data-price="¥16,675" data-remaining="25/110" data-description="AI呈現德古拉在月夜中的狩獵場景，展現其作為夜之王者的威嚴。">
+                        <div class="nft-image"><i class="fas fa-bat text-indigo-500"></i></div>
+                        <div class="nft-details">
+                            <h4 class="nft-name text-indigo-300">月夜狩獵</h4>
+                            <p class="nft-description">AI呈現德古拉在月夜中的狩獵場景，展現其作為夜之王者的威嚴。</p>
+                            <div class="nft-price">¥16,675</div>
+                            <div class="nft-stats">
+                                <div class="stat-item"><div class="stat-value">25/110</div><div class="stat-label">剩餘</div></div>
+                                <div class="stat-item"><div class="stat-value">2025/10/15</div><div class="stat-label">發售日期</div></div>
+                            </div>
+                            <button class="btn btn-cart add-to-cart">添加到購物車</button>
+                        </div>
+                    </div>
+                    
+                    <div class="nft-card" data-id="dgl-008" data-name="永恆詛咒" data-price="¥29,900" data-remaining="2/25" data-description="AI重構整部《德古拉》的黑暗世界，將永生與詛咒的主題融為一體的終極哥特作品。">
+                        <span class="limited-badge">限量版</span>
+                        <div class="nft-image"><i class="fas fa-skull text-indigo-500"></i></div>
+                        <div class="nft-details">
+                            <h4 class="nft-name text-indigo-300">永恆詛咒</h4>
+                            <p class="nft-description">AI重構整部《德古拉》的黑暗世界，將永生與詛咒的主題融為一體的終極哥特作品。</p>
+                            <div class="nft-price">¥29,900</div>
+                            <div class="nft-stats">
+                                <div class="stat-item"><div class="stat-value">2/25</div><div class="stat-label">剩餘</div></div>
+                                <div class="stat-item"><div class="stat-value">2025/10/15</div><div class="stat-label">發售日期</div></div>
+                            </div>
+                            <button class="btn btn-cart add-to-cart">添加到購物車</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 页脚 -->
+    <section id="faq" class="py-20 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-12 text-accent">常見問題</h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="faq-item mb-6">
+                    <button class="faq-question w-full text-left p-6 bg-gray-800 rounded-lg hover:bg-gray-700 transition duration-300">
+                        <span class="text-xl font-semibold">什麼是香港AI國際電影節NFT？</span>
+                        <i class="fas fa-chevron-down float-right mt-1"></i>
+                    </button>
+                    <div class="faq-answer hidden p-6 bg-gray-900 rounded-b-lg">
+                        <p class="text-gray-300">香港AI國際電影節NFT是全球首個專注於AI原生電影收藏品的數字資產平台。每個NFT都代表著AI藝術與電影敘事的完美結合，是未來電影史上的里程碑。</p>
+                    </div>
+                </div>
+                <div class="faq-item mb-6">
+                    <button class="faq-question w-full text-left p-6 bg-gray-800 rounded-lg hover:bg-gray-700 transition duration-300">
+                        <span class="text-xl font-semibold">如何購買NFT？</span>
+                        <i class="fas fa-chevron-down float-right mt-1"></i>
+                    </button>
+                    <div class="faq-answer hidden p-6 bg-gray-900 rounded-b-lg">
+                        <p class="text-gray-300">您可以瀏覽我們的NFT系列，選擇心儀的作品，點擊"添加到購物車"按鈕。我們支持多種支付方式，包括人民幣結算。</p>
+                    </div>
+                </div>
+                <div class="faq-item mb-6">
+                    <button class="faq-question w-full text-left p-6 bg-gray-800 rounded-lg hover:bg-gray-700 transition duration-300">
+                        <span class="text-xl font-semibold">NFT的價值如何保證？</span>
+                        <i class="fas fa-chevron-down float-right mt-1"></i>
+                    </button>
+                    <div class="faq-answer hidden p-6 bg-gray-900 rounded-b-lg">
+                        <p class="text-gray-300">我們的NFT基於區塊鏈技術，確保每個作品的唯一性和所有權。同時，作為香港AI國際電影節的官方發行，具有極高的收藏價值和投資潛力。</p>
+                    </div>
+                </div>
+                <div class="faq-item mb-6">
+                    <button class="faq-question w-full text-left p-6 bg-gray-800 rounded-lg hover:bg-gray-700 transition duration-300">
+                        <span class="text-xl font-semibold">是否有限量版NFT？</span>
+                        <i class="fas fa-chevron-down float-right mt-1"></i>
+                    </button>
+                    <div class="faq-answer hidden p-6 bg-gray-900 rounded-b-lg">
+                        <p class="text-gray-300">是的，我們提供多種限量版NFT，數量稀少，具有更高的收藏價值。這些限量版作品通常會在短時間內售罄，建議及早購買。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 px-4">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-12 text-accent">聯絡我們</h2>
+            <div class="max-w-2xl mx-auto">
+                <p class="text-lg mb-8">如有任何問題或建議，歡迎隨時與我們聯繫。</p>
+                <div class="contact-info mb-8">
+                    <p class="mb-4"><i class="fas fa-envelope mr-3 text-accent"></i>info@hkaiiff.org</p>
+                    <p class="mb-4"><i class="fas fa-phone mr-3 text-accent"></i>+852 1234 5678</p>
+                    <p class="mb-4"><i class="fas fa-map-marker-alt mr-3 text-accent"></i>香港特別行政區</p>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer class="footer">
         <div class="container mx-auto px-4">
-            <div class="max-w-6xl mx-auto">
-                <div class="footer-grid">
-                    <div class="footer-section">
-                        <h4>香港AI國際電影節</h4>
-                        <p class="text-gray-400 mb-6">
-                            全球首個專注於AI原生電影的國際電影節，致力於推動人工智能與電影藝術的融合創新。
-                        </p>
-                        <div class="flex space-x-4">
-                            <a href="#" class="text-gray-400 hover:text-accent text-xl transition-colors">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="#" class="text-gray-400 hover:text-accent text-xl transition-colors">
-                                <i class="fab fa-discord"></i>
-                            </a>
-                            <a href="#" class="text-gray-400 hover:text-accent text-xl transition-colors">
-                                <i class="fab fa-telegram"></i>
-                            </a>
-                            <a href="#" class="text-gray-400 hover:text-accent text-xl transition-colors">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="footer-section">
-                        <h4>NFT系列</h4>
-                        <ul class="footer-links">
-                            <li><a href="#collection">西游記系列</a></li>
-                            <li><a href="#collection">紅樓夢系列</a></li>
-                            <li><a href="#collection">水滸傳系列</a></li>
-                            <li><a href="#collection">三國演義系列</a></li>
-                            <li><a href="#collection">聊齋志異系列</a></li>
-                            <li><a href="#collection">金瓶梅系列</a></li>
-                            <li><a href="#collection">僵屍約會系列</a></li>
-                            <li><a href="#collection">德古拉系列</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer-section">
-                        <h4>支持與服務</h4>
-                        <ul class="footer-links">
-                            <li><a href="#">購買指南</a></li>
-                            <li><a href="#">錢包設置</a></li>
-                            <li><a href="#">常見問題</a></li>
-                            <li><a href="#">客戶服務</a></li>
-                            <li><a href="#">交易幫助</a></li>
-                            <li><a href="#">技術支持</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer-section">
-                        <h4>官方授權與合作伙伴</h4>
-                        <div class="mb-6">
-                            <h5 class="text-lg font-semibold text-accent mb-3">香港AI國際電影節官方授權</h5>
-                            <ul class="footer-links text-sm">
-                                <li><a href="#">香港AI國際電影節協會</a></li>
-                                <li><a href="#">香港AI國際電影節頒獎禮</a></li>
-                                <li><a href="#">香港AI電影市場</a></li>
-                                <li><a href="#">香港AI電影學院</a></li>
-                                <li><a href="#">香港AI國際電影節徵片中心</a></li>
-                                <li><a href="#">香港AI電影標準委員會</a></li>
-                                <li><a href="#">香港AI電影基金會</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="border-t border-gray-700 pt-8 mt-8">
-                    <div class="text-center text-gray-400">
-                        <p class="mb-4">
-                            © 2024 香港AI國際電影節. 保留所有權利. | 
-                            <span class="text-accent">HKAIIFF Official NFT Collection</span>
-                        </p>
-                        <p class="text-sm">
-                            本網站所有NFT均為官方授權發行，請認准官方渠道購買以避免損失
-                        </p>
-                    </div>
-                </div>
-            </div>
+            <p>&copy; 2025 香港AI國際電影節官方NFT平台. 版權所有.</p>
+            <p class="mt-2 text-sm">本平台致力於推廣AI藝術與電影文化的融合發展</p>
         </div>
     </footer>
 
-    <!-- NFT詳情彈窗 -->
-    <div id="detailModal" class="detail-modal">
-        <div class="detail-content">
-            <div class="flex justify-between items-center mb-8">
-                <h2 id="detailTitle" class="text-3xl font-black bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">
-                    NFT詳情
-                </h2>
-                <button id="closeDetailModal" class="text-gray-400 hover:text-white text-3xl transition-colors">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            
-            <div class="detail-header">
-                <div id="detailImage" class="detail-image bg-gradient-to-br from-blue-600 to-purple-900">
-                    <i class="fas fa-image"></i>
-                </div>
-                
-                <div class="detail-info">
-                    <h1 id="detailName" class="text-4xl font-bold mb-4"></h1>
-                    <p id="detailSeries" class="text-xl text-gray-400 mb-6"></p>
-                    <div id="detailPrice" class="text-5xl font-black text-accent mb-6"></div>
-                    
-                    <div class="grid grid-cols-2 gap-4 mb-8">
-                        <div class="bg-black bg-opacity-30 p-4 rounded-lg text-center">
-                            <div id="detailSupply" class="text-2xl font-bold text-accent">-</div>
-                            <div class="text-sm text-gray-400">發行量</div>
-                        </div>
-                        <div class="bg-black bg-opacity-30 p-4 rounded-lg text-center">
-                            <div id="detailRarity" class="text-2xl font-bold text-accent">-</div>
-                            <div class="text-sm text-gray-400">稀有度</div>
-                        </div>
-                    </div>
-                    
-                    <div class="space-y-4 mb-8">
-                        <button id="detailAddToCart" class="btn btn-buy w-full">
-                            <i class="fas fa-shopping-cart mr-2"></i>加入購物車
-                        </button>
-                        <button id="detailBuyNow" class="btn btn-gold w-full">
-                            <i class="fas fa-credit-card mr-2"></i>立即購買
-                        </button>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="border-t border-gray-600 pt-8">
-                <h3 class="text-2xl font-bold mb-4">詳細介紹</h3>
-                <div id="detailDescription" class="text-gray-300 leading-relaxed">
-                    <!-- 詳細介紹內容將通過JavaScript填充 -->
-                </div>
-                
-                <h3 class="text-2xl font-bold mt-8 mb-4">NFT屬性</h3>
-                <div id="detailAttributes" class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                    <!-- 屬性內容將通過JavaScript填充 -->
-                </div>
-                
-                <h3 class="text-2xl font-bold mt-8 mb-4">權益說明</h3>
-                <div id="detailBenefits" class="space-y-3">
-                    <!-- 權益內容將通過JavaScript填充 -->
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- 固定購物車按鈕 -->
-    <div id="fixedCart" class="fixed-cart" style="display: none;">
-        <i class="fas fa-shopping-cart text-2xl"></i>
-        <span id="fixedCartCount" class="cart-count">0</span>
-    </div>
-
-    <!-- 購物車彈窗 -->
-    <div id="cartModal" class="modal">
+    <!-- NFT Detail Modal -->
+    <div id="nft-modal" class="modal">
         <div class="modal-content">
-            <div class="flex justify-between items-center mb-8">
-                <h2 class="text-3xl font-black bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">
-                    購物車
-                </h2>
-                <button id="closeCartModal" class="text-gray-400 hover:text-white text-3xl transition-colors">
-                    <i class="fas fa-times"></i>
-                </button>
+            <span class="close-button">&times;</span>
+            <div class="modal-nft-image">
+                <i id="modal-icon" class="fas fa-image"></i>
             </div>
-            <div id="cartContent">
-                <div class="text-center text-gray-400 py-12">
-                    <i class="fas fa-shopping-cart text-6xl mb-6 opacity-50"></i>
-                    <p class="text-xl">您的購物車是空的</p>
-                    <p class="text-sm mt-2">趕快選擇您喜愛的NFT吧！</p>
+            <div class="modal-nft-details">
+                <h3 id="modal-title">NFT標題</h3>
+                <div class="price" id="modal-price">¥0</div>
+                <div class="description" id="modal-description">NFT描述</div>
+                <div class="modal-stats">
+                    <div class="modal-stat-item">
+                        <div class="modal-stat-value" id="modal-remaining">0</div>
+                        <div class="modal-stat-label">剩餘數量</div>
+                    </div>
+                    <div class="modal-stat-item">
+                        <div class="modal-stat-value" id="modal-date">2025/07/01</div>
+                        <div class="modal-stat-label">發售日期</div>
+                    </div>
                 </div>
-            </div>
-            <div id="cartTotal" style="display: none;" class="border-t border-gray-600 pt-6 mt-6">
-                <div class="flex justify-between items-center mb-6">
-                    <span class="text-2xl font-bold">總計：</span>
-                    <span id="totalAmount" class="text-3xl font-black text-accent">¥0</span>
-                </div>
-                <button id="checkoutBtn" class="btn btn-gold w-full text-xl py-4">
-                    <i class="fas fa-credit-card mr-3"></i>立即結算購買
-                </button>
-                <p class="text-xs text-gray-400 text-center mt-4">
-                    點擊結算後將跳轉到安全支付頁面
-                </p>
+                <button class="btn btn-cart" style="width: 100%; margin-top: 20px;" id="modal-add-cart">添加到購物車</button>
             </div>
         </div>
     </div>
 
     <script>
-        // 購物車數據
-        let cart = [];
-        
-        // NFT詳細數據
-        const nftData = {
-            'xiyouji-qitiandasheng': {
-                name: '齊天大聖',
-                series: '西游記系列',
-                price: 88888,
-                supply: 888,
-                rarity: '傳說',
-                image: 'bg-gradient-to-br from-yellow-600 to-yellow-900 text-gold',
-                icon: 'fas fa-crown',
-                description: `
-                    <p class="mb-4">齊天大聖是孫悟空的最高境界形態，代表著無限的神通法力和不屈不撓的精神。在AI重現的西游記電影中，齊天大聖將以前所未有的視覺效果展現其七十二變的神奇能力。</p>
-                    <p class="mb-4">這個NFT不僅是孫悟空形象的數字化收藏品，更是中華文化精神的象徵。持有者將獲得獨特的社區地位和特殊權益，包括參與項目重大決策的投票權。</p>
-                    <p>作為傳說級稀有度的NFT，全球僅發行888枚，每一枚都承載著深厚的文化底蘊和巨大的收藏價值。</p>
-                `,
-                attributes: [
-                    { trait: '神通等級', value: 'SSS+' },
-                    { trait: '戰鬥力', value: '無限' },
-                    { trait: '變化能力', value: '七十二變' },
-                    { trait: '武器', value: '如意金箍棒' },
-                    { trait: '特殊能力', value: '火眼金睛' },
-                    { trait: '稱號', value: '齊天大聖' }
-                ],
-                benefits: [
-                    '永久觀影西游記AI電影權益',
-                    '參與DAO治理投票權',
-                    '商業授權使用權限',
-                    '專屬VIP社區准入',
-                    '未來項目優先購買權',
-                    '線下活動特邀權益'
-                ]
-            },
-            'xiyouji-jingoubang': {
-                name: '如意金箍棒',
-                series: '西游記系列',
-                price: 8888,
-                supply: 8888,
-                rarity: '史詩',
-                image: 'bg-gradient-to-br from-yellow-500 to-yellow-800 text-gold',
-                icon: 'fas fa-magic',
-                description: `
-                    <p class="mb-4">如意金箍棒，原為東海龍宮定海神針，重達一萬三千五百斤。在孫悟空手中，它能夠隨心所欲地變大變小、變長變短，是西游記中最具代表性的神兵利器。</p>
-                    <p class="mb-4">此NFT採用最先進的3D動態效果技術，完美還原金箍棒的神奇變化特性。持有者可以在虛擬空間中體驗金箍棒的各種形態變化。</p>
-                    <p>作為史詩級稀有度NFT，具有特殊的合成功能，可與其他NFT組合產生更強大的效果。</p>
-                `,
-                attributes: [
-                    { trait: '重量', value: '13,500斤' },
-                    { trait: '材質', value: '定海神針鐵' },
-                    { trait: '變化能力', value: '如意變形' },
-                    { trait: '威力等級', value: 'S級' },
-                    { trait: '特效類型', value: '3D動態' },
-                    { trait: '合成能力', value: '可合成' }
-                ],
-                benefits: [
-                    '永久觀影西游記AI電影權益',
-                    'NFT合成材料功能',
-                    '3D動態視覺效果',
-                    '專屬收藏者徽章',
-                    '限定版周邊商品',
-                    '社區活動優先權'
-                ]
+        // Countdown Timer
+        function updateCountdown() {
+            const targetDate = new Date('2025-07-01T00:00:00').getTime();
+            const now = new Date().getTime();
+            const difference = targetDate - now;
+
+            if (difference > 0) {
+                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+                document.getElementById('days').textContent = days.toString().padStart(2, '0');
+                document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+                document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+                document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
             }
-        };
-        
-        // 倒計時功能 (25天倒計時)
-        function startCountdown() {
-            const countdownTime = 25 * 24 * 60 * 60 * 1000; // 25天轉毫秒
-            const startTime = Date.now();
-            const endTime = startTime + countdownTime;
-            
-            function updateCountdown() {
-                const now = Date.now();
-                const remaining = endTime - now;
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // Mobile Menu Toggle
+        const menuButton = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMenuButton = document.getElementById('close-menu-button');
+
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+        });
+
+        closeMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+
+        // FAQ Toggle
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                const icon = button.querySelector('i');
                 
-                if (remaining <= 0) {
-                    document.getElementById('days').textContent = '00';
-                    document.getElementById('hours').textContent = '00';
-                    document.getElementById('minutes').textContent = '00';
-                    document.getElementById('seconds').textContent = '00';
-                    return;
+                if (answer.classList.contains('hidden')) {
+                    answer.classList.remove('hidden');
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up');
+                } else {
+                    answer.classList.add('hidden');
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down');
                 }
-                
-                const days = Math.floor(remaining / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((remaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((remaining % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((remaining % (1000 * 60)) / 1000);
-                
-                document.getElementById('days').textContent = String(days).padStart(2, '0');
-                document.getElementById('hours').textContent = String(hours).padStart(2, '0');
-                document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
-                document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
-            }
-            
-            updateCountdown();
-            setInterval(updateCountdown, 1000);
-        }
-
-        // 打開NFT詳情彈窗
-        function openDetailModal(nftId) {
-            const nft = nftData[nftId];
-            if (!nft) return;
-
-            document.getElementById('detailName').textContent = nft.name;
-            document.getElementById('detailSeries').textContent = nft.series;
-            document.getElementById('detailPrice').textContent = `¥${nft.price.toLocaleString()}`;
-            document.getElementById('detailSupply').textContent = nft.supply.toLocaleString();
-            document.getElementById('detailRarity').textContent = nft.rarity;
-            document.getElementById('detailDescription').innerHTML = nft.description;
-
-            // 設置圖片
-            const detailImage = document.getElementById('detailImage');
-            detailImage.className = `detail-image ${nft.image}`;
-            detailImage.innerHTML = `<i class="${nft.icon}"></i>`;
-
-            // 設置屬性
-            const attributesContainer = document.getElementById('detailAttributes');
-            attributesContainer.innerHTML = nft.attributes.map(attr => `
-                <div class="bg-black bg-opacity-30 p-4 rounded-lg">
-                    <div class="text-accent font-bold">${attr.value}</div>
-                    <div class="text-sm text-gray-400">${attr.trait}</div>
-                </div>
-            `).join('');
-
-            // 設置權益
-            const benefitsContainer = document.getElementById('detailBenefits');
-            benefitsContainer.innerHTML = nft.benefits.map(benefit => `
-                <div class="flex items-start">
-                    <i class="fas fa-check-circle text-accent mr-3 mt-1"></i>
-                    <span>${benefit}</span>
-                </div>
-            `).join('');
-
-            // 設置按鈕事件
-            document.getElementById('detailAddToCart').onclick = () => {
-                const ipName = nftId.split('-')[0];
-                addToCart(ipName, nft.name, nft.price);
-            };
-
-            document.getElementById('detailBuyNow').onclick = () => {
-                const ipName = nftId.split('-')[0];
-                addToCart(ipName, nft.name, nft.price);
-                document.getElementById('detailModal').classList.remove('show');
-                document.getElementById('cartModal').classList.add('show');
-            };
-
-            document.getElementById('detailModal').classList.add('show');
-        }
-
-        // 關閉詳情彈窗
-        document.getElementById('closeDetailModal').addEventListener('click', () => {
-            document.getElementById('detailModal').classList.remove('show');
+            });
         });
 
-        // 點擊背景關閉詳情彈窗
-        document.getElementById('detailModal').addEventListener('click', (e) => {
-            if (e.target === e.currentTarget) {
-                document.getElementById('detailModal').classList.remove('show');
-            }
-        });
-        
-        // 添加到購物車
-        function addToCart(ipName, seriesName, price) {
-            const item = {
-                ip: ipName,
-                series: seriesName,
-                quantity: 1,
-                price: price,
-                total: price
-            };
+        // Shopping Cart
+        let cartItems = [];
+        let cartCount = 0;
 
-            // 檢查是否已存在相同項目
-            const existingIndex = cart.findIndex(cartItem => 
-                cartItem.ip === ipName && cartItem.series === seriesName
-            );
-
-            if (existingIndex > -1) {
-                cart[existingIndex].quantity += 1;
-                cart[existingIndex].total = cart[existingIndex].quantity * cart[existingIndex].price;
-            } else {
-                cart.push(item);
-            }
-
-            updateCartUI();
-            showNotification(`${seriesName} 已添加到購物車`);
+        function updateCartCount() {
+            document.getElementById('cart-count').textContent = cartCount;
         }
 
-        // 顯示通知
-        function showNotification(message) {
-            const notification = document.createElement('div');
-            notification.className = 'fixed top-24 right-4 bg-gradient-to-r from-green-500 to-green-600 text-white px-6 py-4 rounded-lg shadow-2xl z-50 transform translate-x-full transition-all duration-500';
-            notification.innerHTML = `
-                <div class="flex items-center">
-                    <i class="fas fa-check-circle mr-3 text-xl"></i>
-                    <span class="font-semibold">${message}</span>
-                </div>
-            `;
-            document.body.appendChild(notification);
-
-            setTimeout(() => {
-                notification.style.transform = 'translateX(0)';
-            }, 100);
-
-            setTimeout(() => {
-                notification.style.transform = 'translateX(100%)';
+        // Add to Cart functionality
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const card = button.closest('.nft-card');
+                const id = card.dataset.id;
+                const name = card.dataset.name;
+                const price = card.dataset.price;
+                
+                cartItems.push({ id, name, price });
+                cartCount++;
+                updateCartCount();
+                
+                // Show success message
+                button.textContent = '已添加到購物車';
+                button.style.background = 'linear-gradient(135deg, #28a745, #20c997)';
                 setTimeout(() => {
-                    if (document.body.contains(notification)) {
-                        document.body.removeChild(notification);
-                    }
-                }, 500);
-            }, 3000);
-        }
-
-        // 更新購物車UI
-        function updateCartUI() {
-            const cartCount = document.getElementById('cartCount');
-            const fixedCartCount = document.getElementById('fixedCartCount');
-            const fixedCart = document.getElementById('fixedCart');
-            
-            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
-            
-            if (totalItems > 0) {
-                cartCount.textContent = totalItems;
-                cartCount.style.display = 'flex';
-                fixedCartCount.textContent = totalItems;
-                fixedCart.style.display = 'flex';
-            } else {
-                cartCount.style.display = 'none';
-                fixedCart.style.display = 'none';
-            }
-
-            updateCartModal();
-        }
-
-        // 更新購物車彈窗內容
-        function updateCartModal() {
-            const cartContent = document.getElementById('cartContent');
-            const cartTotal = document.getElementById('cartTotal');
-            const totalAmount = document.getElementById('totalAmount');
-
-            if (cart.length === 0) {
-                cartContent.innerHTML = `
-                    <div class="text-center text-gray-400 py-12">
-                        <i class="fas fa-shopping-cart text-6xl mb-6 opacity-50"></i>
-                        <p class="text-xl">您的購物車是空的</p>
-                        <p class="text-sm mt-2">趕快選擇您喜愛的NFT吧！</p>
-                    </div>
-                `;
-                cartTotal.style.display = 'none';
-                return;
-            }
-
-            const total = cart.reduce((sum, item) => sum + item.total, 0);
-
-            cartContent.innerHTML = `
-                <div class="space-y-4">
-                    ${cart.map((item, index) => `
-                        <div class="flex justify-between items-center p-6 bg-gray-800 rounded-xl border border-gray-700">
-                            <div class="flex-1">
-                                <h4 class="font-bold text-lg">${item.series}</h4>
-                                <p class="text-sm text-gray-400 mb-2">${getIPDisplayName(item.ip)}系列</p>
-                                <div class="flex items-center space-x-4 text-sm">
-                                    <span>數量: ${item.quantity}</span>
-                                    <span>單價: ¥${item.price.toLocaleString()}</span>
-                                </div>
-                            </div>
-                            <div class="text-right">
-                                <div class="text-xl font-bold text-accent mb-2">¥${item.total.toLocaleString()}</div>
-                                <button class="text-red-400 hover:text-red-300 text-sm px-3 py-1 border border-red-400 rounded-md transition-colors" onclick="removeFromCart(${index})">
-                                    <i class="fas fa-trash mr-1"></i> 移除
-                                </button>
-                            </div>
-                        </div>
-                    `).join('')}
-                </div>
-            `;
-
-            totalAmount.textContent = `¥${total.toLocaleString()}`;
-            cartTotal.style.display = 'block';
-        }
-
-        // 獲取IP顯示名稱
-        function getIPDisplayName(ip) {
-            const ipNames = {
-                'xiyouji': '西游記',
-                'hongloumeng': '紅樓夢',
-                'shuihuzhuan': '水滸傳',
-                'sanguoyanyi': '三國演義',
-                'liaozhai': '聊齋志異',
-                'jinpingmei': '金瓶梅',
-                'woyuzombieyouyuehui': '我和僵屍有個約會',
-                'degula': '德古拉：永恆暗夜'
-            };
-            return ipNames[ip] || ip;
-        }
-
-        // 從購物車移除項目
-        function removeFromCart(index) {
-            cart.splice(index, 1);
-            updateCartUI();
-        }
-
-        // 購物車切換
-        document.getElementById('cartToggle').addEventListener('click', () => {
-            document.getElementById('cartModal').classList.add('show');
+                    button.textContent = '添加到購物車';
+                    button.style.background = 'linear-gradient(135deg, #00ff9d, #00d4aa)';
+                }, 2000);
+            });
         });
 
-        document.getElementById('fixedCart').addEventListener('click', () => {
-            document.getElementById('cartModal').classList.add('show');
+        // NFT Card Click for Modal
+        document.querySelectorAll('.nft-card').forEach(card => {
+            card.addEventListener('click', () => {
+                const modal = document.getElementById('nft-modal');
+                const id = card.dataset.id;
+                const name = card.dataset.name;
+                const price = card.dataset.price;
+                const remaining = card.dataset.remaining;
+                const description = card.dataset.description;
+                
+                // Get icon from the card
+                const icon = card.querySelector('.nft-image i');
+                const iconClass = icon.className;
+                
+                // Update modal content
+                document.getElementById('modal-title').textContent = name;
+                document.getElementById('modal-price').textContent = price;
+                document.getElementById('modal-description').textContent = description;
+                document.getElementById('modal-remaining').textContent = remaining;
+                document.getElementById('modal-icon').className = iconClass;
+                
+                // Show modal
+                modal.classList.add('show');
+                
+                // Add to cart from modal
+                document.getElementById('modal-add-cart').onclick = () => {
+                    cartItems.push({ id, name, price });
+                    cartCount++;
+                    updateCartCount();
+                    modal.classList.remove('show');
+                };
+            });
         });
 
-        // 關閉購物車
-        document.getElementById('closeCartModal').addEventListener('click', () => {
-            document.getElementById('cartModal').classList.remove('show');
+        // Close Modal
+        document.querySelector('.close-button').addEventListener('click', () => {
+            document.getElementById('nft-modal').classList.remove('show');
         });
 
-        // 點擊背景關閉彈窗
-        document.getElementById('cartModal').addEventListener('click', (e) => {
+        // Close modal when clicking outside
+        document.getElementById('nft-modal').addEventListener('click', (e) => {
             if (e.target === e.currentTarget) {
-                document.getElementById('cartModal').classList.remove('show');
+                e.currentTarget.classList.remove('show');
             }
         });
 
-        // 結算按鈕
-        document.getElementById('checkoutBtn').addEventListener('click', () => {
-            if (cart.length === 0) return;
-            
-            const total = cart.reduce((sum, item) => sum + item.total, 0);
-            const itemCount = cart.reduce((sum, item) => sum + item.quantity, 0);
-            
-            alert(`🎉 感謝您的購買！\n\n📦 商品數量: ${itemCount}件NFT\n💰 訂單總額: ¥${total.toLocaleString()}\n\n✅ 我們將在24小時內將NFT發送到您的錢包地址\n🔒 請確保您已連接正確的以太坊錢包\n\n🎬 購買完成後即可享受永久觀影權益！`);
-            
-            // 清空購物車
-            cart = [];
-            updateCartUI();
-            document.getElementById('cartModal').classList.remove('show');
-        });
-
-        // 平滑滾動
+        // Smooth Scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    window.scrollTo({
-                        top: target.offsetTop - 80,
-                        behavior: 'smooth'
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
                     });
+                }
+                
+                // Close mobile menu if open
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
                 }
             });
         });
 
-        // 頁面加載完成後啟動倒計時
-        document.addEventListener('DOMContentLoaded', function() {
-            startCountdown();
-        });
+        // Add sparkle effects
+        function createSparkle() {
+            const sparkle = document.createElement('div');
+            sparkle.className = 'sparkle';
+            sparkle.style.left = Math.random() * 100 + '%';
+            sparkle.style.top = Math.random() * 100 + '%';
+            sparkle.style.animationDelay = Math.random() * 3 + 's';
+            
+            document.querySelector('.hero').appendChild(sparkle);
+            
+            setTimeout(() => {
+                sparkle.remove();
+            }, 3000);
+        }
+
+        // Create sparkles periodically
+        setInterval(createSparkle, 500);
+
+        // Initialize
+        updateCartCount();
     </script>
 </body>
 </html>
+
